@@ -1,0 +1,25 @@
+# Bytecode and Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Model checkpoints & large synthetic dataset caches (distributed via GitHub Release / Zenodo)
+*.pt
+*.pth
+*.npz
+!results/phase3_revision_v4/elasticity_example_s42.npz
+
+results/phase2_kaggle_private/downloads/
+results/*/cache/
+results/phase3_p2/lshape_darcy/seed_*/
+.artifact_cache/
+
+# Generated Tier-2 outputs & logs
+outputs/
+*.log
+*.tmp
+
+# OS / Editor
+.DS_Store
+Thumbs.db

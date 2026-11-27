@@ -1,0 +1,26 @@
+% Auto-generated booktabs LaTeX tables. Requires booktabs.
+
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\caption{Non-rectangular L-shaped 2D Darcy ($\Omega_L = (0,1)^2 \setminus [0.5,1)^2$) across five formal seeds ($\alpha=0.10$, 300 test cases per split). Widths are empirically matched at $90\%$ simultaneous coverage; Corner cov.\ evaluates simultaneous coverage within radius $0.15$ of the re-entrant corner $(0.5,0.5)$. Fast spectral FFT/DST inverses do not apply on $\Omega_L$; OpRes-CP uses $O(M)$ cell-agglomeration Galerkin AMG lifting.}
+\label{tab:opres-lshape}
+\begin{tabular}{lrrrr}
+\toprule
+Method & ID $64^2$ cov / width & Corner cov. & Paired $128^2$ ($\Delta$ pp) & Contrast OOD cov / width \\
+\midrule
+Uniform-CP & 89.27 / 0.03654 & 99.33 & 89.20 ($+0.07$) & 70.00 / 0.10364 \\
+Choi CP-B & 89.13 / 0.04886 & 99.67 & 88.27 ($-0.87$) & 70.20 / 0.14658 \\
+Full-Field PI-CP & 88.13 / 0.08893 & 98.93 & 86.53 ($-1.40$) & 68.73 / 0.44060 \\
+Ensemble (same center) & 87.73 / 0.03281 & 97.47 & 74.80 ($-14.87$) & 74.07 / 0.07597 \\
+Ensemble (mean center) & 88.40 / 0.03254 & 97.67 & 76.27 ($-13.87$) & 75.20 / 0.07517 \\
+\addlinespace[3pt]
+Unsigned AMG-V2 & 88.87 / 0.02763 & 99.87 & 91.73 ($+1.33$) & 75.47 / 0.06726 \\
+Jacobi-PCG5 & 91.53 / 0.01154 & 98.40 & 21.73 ($-69.87$) & 89.67 / 0.02969 \\
+OpRes-CP (AMG-V2) & 91.27 / 0.01072 & 91.27 & 83.60 ($-7.53$) & 97.33 / 0.01864 \\
+OpRes-CP (AMG-PCG2) & 90.40 / 0.01019 & 90.73 & 70.93 ($-19.80$) & 96.13 / 0.01949 \\
+Exact sparse lift (oracle) & 91.53 / 0.01182 & 91.53 & 88.33 ($-3.13$) & 97.33 / 0.01974 \\
+\bottomrule
+\end{tabular}
+\end{table*}

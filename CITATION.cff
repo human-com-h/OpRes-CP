@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software or benchmark suite, please cite the OpRes-CP manuscript and software archive."
+title: "OpRes-CP: Physics-as-Scale vs. Ensembles-as-Scale — Signed Residual Lifting for Simultaneous Conformal Bands"
+type: software
+authors:
+  - family-names: Hao
+    given-names: Zida
+    orcid: "https://orcid.org/0009-0006-7718-2000"
+    affiliation: "School of Software, Xinjiang University"
+    email: "20242501431@stu.xju.edu.cn"
+  - family-names: Li
+    given-names: Yubo
+    orcid: "https://orcid.org/0009-0005-8391-9155"
+    affiliation: "School of Software, Xinjiang University"
+    email: "20242501197@stu.xju.edu.cn"
+repository-code: "https://github.com/human-com-h/OpRes-CP"
+url: "https://github.com/human-com-h/OpRes-CP"
+license: MIT
+keywords:
+  - neural operators
+  - conformal prediction
+  - uncertainty quantification
+  - residual lifting
+  - algebraic multigrid
+  - partial differential equations
+  - finite element method
+preferred-citation:
+  type: article
+  title: "Physics-as-Scale vs. Ensembles-as-Scale: Signed Residual Lifting for Simultaneous Conformal Bands"
+  authors:
+    - family-names: Hao
+      given-names: Zida
+      orcid: "https://orcid.org/0009-0006-7718-2000"
+    - family-names: Li
+      given-names: Yubo
+      orcid: "https://orcid.org/0009-0005-8391-9155"
+  journal: "Computer Methods in Applied Mechanics and Engineering"
+  year: 2026
+  notes: "Submitted / under review"

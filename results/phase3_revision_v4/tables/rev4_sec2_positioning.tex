@@ -1,0 +1,23 @@
+% Auto-generated Revision v4 positioning table (pure ASCII).
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\caption{Methodological positioning across neural-operator UQ, residual point correctors, and classical FEM a posteriori estimators. OpRes-CP decouples conformal sharpness from contractive point correction via signed PDE residual lifting around an untouched surrogate.}
+\label{tab:opres-positioning}
+\fitcmametable{%
+\begin{tabular}{lllllll}
+\toprule
+Method family & Training-free & Modifies $\widehat U_h$ & Uses PDE op. & Op.\ requirement & Coverage / bound type & Mesh support \\
+\midrule
+RBNO + FOSLS (Qiu et al.~\cite{qiu2026variationally}) & No (coupled train) & Built-in RB & Variational loss & Variational coercivity & Deterministic energy & Conforming FEM \\
+Point Corrector (Jha~\cite{jha2024residual}; Cao~\cite{cao2023residual}) & Yes (corrector) & Yes ($\widehat U_h - B_h R_h$) & Linearized $B_h R_h$ & Strict contraction ($\delta_{\rm inv}<1$) & Point accuracy only & Arbitrary FEM / grid \\
+Encoder--Reg.\ / GP (Yvonnet~\cite{yvonnet2026clear}; Kumar~\cite{kumar2024nogap}) & No / Modifies fit & GP / surrogate & No (feature-based) & Well-specified prior & Heuristic / Bayesian & Mesh / parametric \\
+FEM BR/Verf\"urth \& ZZ \cite{ainsworth2000aposteriori,zienkiewicz1992superconvergent} & Yes & No & Edge jumps / recovery & Asymptotic saturation & Element energy / heuristic & Unstructured FEM \\
+5-Member Ensemble + CP \cite{choi2026simultaneous} & No ($5\times$ train) & Optional mean & No & Uncorrelated members & Exact fin.-sample sim.\ (ID) & Any shared grid \\
+Raw $|R_h|$ PI-CP \cite{chin2026picp} & Yes & No & Uninverted $|R_h|$ & None ($O(h^{-m})$ blowup) & Exact fin.-sample sim.\ (ID) & Structured / FEM \\
+\textbf{OpRes-CP (ours)} & \textbf{Yes} & \textbf{No (orthogonal)} & \textbf{Signed $B_h R_h$ + env.} & \textbf{Order-preservation ($\delta_{\rm inv}$ can $>1$)} & \textbf{Exact sim.\ (ID) + WCP/gate} & \textbf{Structured + Unstr.\ FEM} \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

@@ -1,0 +1,31 @@
+{
+  "fv_manufactured": [
+    {
+      "grid": 32,
+      "manufactured_fv_symbol_error": 0.015849251497161987,
+      "error_over_h_squared": 16.229633533093875,
+      "nyquist_band_symbol": 2048.0
+    },
+    {
+      "grid": 64,
+      "manufactured_fv_symbol_error": 0.003963267723197106,
+      "error_over_h_squared": 16.233544594215346,
+      "nyquist_band_symbol": 8192.0
+    },
+    {
+      "grid": 128,
+      "manufactured_fv_symbol_error": 0.000990876618487846,
+      "error_over_h_squared": 16.234522517304868,
+      "nyquist_band_symbol": 32768.0
+    },
+    {
+      "grid": 256,
+      "manufactured_fv_symbol_error": 0.0002477228852519886,
+      "error_over_h_squared": 16.234767007874325,
+      "nyquist_band_symbol": 131072.0
+    }
+  ],
+  "rank_enumerations": 12,
+  "ess_example": 500,
+  "p_test_example": 0.8333333333333334
+}

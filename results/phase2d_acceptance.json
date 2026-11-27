@@ -1,0 +1,38 @@
+{
+  "2da": {
+    "weight_hash_checks": 10,
+    "data_hash_matches": 60,
+    "field_groups": 380,
+    "replay_rows": 80,
+    "baseline_checkpoint_archives": 25,
+    "max_abs_coverage_delta": 0.0,
+    "max_abs_width_ratio_error": 6.006497033084202e-08
+  },
+  "2db": {
+    "weight_hash_checks": 5,
+    "data_hash_matches": 35,
+    "field_groups": 360,
+    "replay_rows": 60,
+    "baseline_checkpoint_archives": 25,
+    "max_abs_coverage_delta": 0.0,
+    "max_abs_width_ratio_error": 8.68841671941567e-08
+  },
+  "2dc": {
+    "weight_hash_checks": 10,
+    "data_hash_matches": 30,
+    "field_groups": 440,
+    "replay_rows": 80,
+    "baseline_checkpoint_archives": 50,
+    "max_abs_coverage_delta": 0.0,
+    "max_abs_width_ratio_error": 3.457474206935984e-08
+  },
+  "2dh": {
+    "weight_hash_checks": 10,
+    "data_hash_matches": 0,
+    "field_groups": 0,
+    "replay_rows": 0,
+    "baseline_checkpoint_archives": 0,
+    "max_abs_coverage_delta": 0.0,
+    "max_abs_width_ratio_error": 0.0
+  }
+}

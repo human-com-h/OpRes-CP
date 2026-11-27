@@ -1,0 +1,91 @@
+% Auto-generated Revision v4 Appendix C tables (pure ASCII).
+
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\caption{Unstructured 2D elasticity \texttt{Vector SA-AMG-V2} multiscale scaling across five refined perforated-plate meshes ($1{,}018$--$40{,}692$ free DOFs; min interior angle $30.9$--$32.6^\circ$). Log--log CPU runtime slopes: \texttt{SA-AMG} solve $\beta=1.005$, total (setup+solve) $\beta=1.110$ vs.\ exact \texttt{spsolve} $\beta=1.302$. Five-seed global energy contraction $\|I - B_h \mathbf K_h\|_{\mathbf K_h}$ is $100.0\%$ below unity on ID ($0.600$ mean, $0.693$ max), Paired Fine ($0.636$), and OOD-Lam\'e ($0.763$, max $0.862$).}
+\label{tab:opres-elasticity-amg}
+\fitcmametable{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Mesh & Nodes & Free DOFs & Min ang. & $C_G / C_O$ & AMG solve (ms) & AMG tot.\ (ms) & \texttt{spsolve} (ms) & $\|I - B_h \mathbf K_h\|_{\mathbf K_h}$ \\
+\midrule
+M1 & 528 & 1,018 & 30.9$^\circ$ & 1.358/1.916 & 0.64 & 4.65 & 1.97 & 0.580 \\
+M2 & 1,156 & 2,254 & 31.9$^\circ$ & 1.369/2.076 & 1.06 & 9.85 & 4.63 & 0.662 \\
+M3 & 3,174 & 6,254 & 32.6$^\circ$ & 1.365/2.258 & 3.22 & 26.59 & 17.16 & 0.694 \\
+M4 & 8,942 & 17,726 & 32.2$^\circ$ & 1.370/2.482 & 9.32 & 105.02 & 71.43 & 0.725 \\
+M5 & 20,463 & 40,692 & 31.7$^\circ$ & 1.370/2.720 & 24.50 & 266.55 & 232.52 & 0.737 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.2pt}
+\caption{Five-seed temporal discretization convergence of the causal residual lifts. Left: Burgers semi-Lagrangian substep count $K_{\rm sub}\in\{1,2,4,8,16\}$ (reporting non-folded CFL pass rate, signed recovery, ID coverage, matched-$90\%$ width, and P50 CPU trajectory ms; $K_{\rm sub}=4$ eliminates characteristic folding at minor cost). Right: Allen--Cahn Strang internal substeps $K_{\rm str}\in\{1,2,4\}$ (confirming $K_{\rm str}=1$ sufficiency) and frame spacing $\Delta t\in\{0.05,0.10,0.20\}$ confirming second-order $O(\Delta t^2)$ truncation convergence ($\|B_h\tau_h\|_2/\|u\|_2$ scales $\approx 4\times$ per doubling).}
+\label{tab:opres-time-conv}
+\fitcmametable{%
+\begin{tabular}{lrrrrrllrrr}
+\toprule
+\multicolumn{6}{c}{Burgers $64$ substep convergence ($K_{\rm sub}$)} & \multicolumn{5}{c}{Allen--Cahn $64^2$ Strang ($K_{\rm str}$ \& $\Delta t$)} \\
+\cmidrule(lr){1-6}\cmidrule(lr){7-11}
+$K_{\rm sub}$ & Non-fold & $\cos(Z_h,e_h)$ & Rel.\ err & Cov./m90 w & ms & Horizon & Config & $\cos(Z_h,e_h)$ & Rel.\ err & $\|B_h\tau\|_2/\|u\|_2$ / m90 \\
+\midrule
+1 & 100.0\% & 0.6583 & 1.0851 & 90.4/0.1513 & 1.01 & AC $T=1$ & $K_{\rm str}=1$ & 0.9963 & 0.0872 & 0.0101 \\
+2 & 100.0\% & 0.7015 & 0.9223 & 90.9/0.1412 & 1.55 & AC $T=1$ & $K_{\rm str}=4$ & 0.9963 & 0.0872 & 0.0101 \\
+4 & 100.0\% & 0.7240 & 0.8296 & 90.0/0.1393 & 2.77 & AC $T=1$ & $\Delta t=0.05$ & 0.9963 & 0.0872 & 0.00020 \\
+8 & 100.0\% & 0.7308 & 0.7985 & 90.7/0.1391 & 5.06 & AC $T=1$ & $\Delta t=0.10$ & 0.9913 & 0.1218 & 0.00061 \\
+16 & 100.0\% & 0.7335 & 0.7857 & 90.7/0.1403 & 9.01 & AC $T=1$ & $\Delta t=0.20$ & 0.9437 & 0.3242 & 0.00231 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.0pt}
+\caption{Enriched Cal-only physical residual fingerprints under noisy spectral overlap (top, AUROC / point-failure AURC / accepted cov.\ at $5\%$ ID rejection) and Val-anchored exchangeable physics-adaptive mixture $\lambda(A)\in[\lambda_{\min},0.85]$ preserving Theorem~\ref{thm:fixed} ID validity (bottom, coverage \% / actual width across five seeds).}
+\label{tab:opres-physics-gate}
+\fitcmametable{%
+\begin{tabular}{llrrrrr}
+\toprule
+Protocol ($\eta_{\rm noise}$) & Cal-only gate & AUROC & FPR@95 & AURC (pt) & AURC (mc) & Acc.\ cov. \\
+\midrule
+Ambient ($0.10$) & Input $E_{k>8}/E_{\rm tot}$ & 0.936 & 0.733 & 0.0002 & 0.114 & 88.8\% \\
+Ambient ($0.10$) & Phys.\ $\operatorname{RMS}(Z_h)$ & 0.623 & 0.854 & 0.0003 & 0.101 & 87.5\% \\
+Ambient ($0.10$) & Eff.\ wavenum.\ $k_{\rm eff}$ & 0.422 & 0.970 & 0.0191 & 0.126 & 88.0\% \\
+Ambient ($0.10$) & Res.\ HF $\|R_h^{k>8}\|/\|R_h\|$ & 0.438 & 0.965 & 0.0194 & 0.104 & 88.1\% \\
+Ambient ($0.10$) & Cal Phys-Combo & 0.538 & 0.927 & 0.0005 & 0.121 & 87.7\% \\
+Ambient ($0.10$) & Cal Input+Phys-Combo & 0.948 & 0.461 & 0.0002 & 0.119 & 88.6\% \\
+\addlinespace[2pt]
+Ambient ($0.20$) & Input $E_{k>8}/E_{\rm tot}$ & 0.815 & 0.962 & 0.0114 & 0.106 & 89.5\% \\
+Ambient ($0.20$) & Phys.\ $\operatorname{RMS}(Z_h)$ & 0.552 & 0.916 & 0.0046 & 0.079 & 90.1\% \\
+Ambient ($0.20$) & Eff.\ wavenum.\ $k_{\rm eff}$ & 0.470 & 0.967 & 0.0614 & 0.125 & 89.7\% \\
+Ambient ($0.20$) & Res.\ HF $\|R_h^{k>8}\|/\|R_h\|$ & 0.456 & 0.964 & 0.0765 & 0.095 & 89.8\% \\
+Ambient ($0.20$) & Cal Phys-Combo & 0.516 & 0.941 & 0.0088 & 0.104 & 89.7\% \\
+Ambient ($0.20$) & Cal Input+Phys-Combo & 0.833 & 0.868 & 0.0078 & 0.114 & 89.5\% \\
+\addlinespace[2pt]
+ID-noise ($0.10$) & Input $E_{k>8}/E_{\rm tot}$ & 0.509 & 1.000 & 0.0001 & 0.099 & 89.3\% \\
+ID-noise ($0.10$) & Phys.\ $\operatorname{RMS}(Z_h)$ & 0.479 & 0.996 & 0.0001 & 0.093 & 88.5\% \\
+ID-noise ($0.10$) & Eff.\ wavenum.\ $k_{\rm eff}$ & 0.390 & 0.981 & 0.0122 & 0.113 & 88.9\% \\
+ID-noise ($0.10$) & Res.\ HF $\|R_h^{k>8}\|/\|R_h\|$ & 0.306 & 0.994 & 0.0102 & 0.099 & 88.9\% \\
+ID-noise ($0.10$) & Cal Phys-Combo & 0.436 & 0.984 & 0.0003 & 0.111 & 88.7\% \\
+ID-noise ($0.10$) & Cal Input+Phys-Combo & 0.643 & 0.996 & 0.0001 & 0.108 & 89.3\% \\
+\addlinespace[2pt]
+\midrule
+\multicolumn{7}{l}{\textbf{Val-anchored exchangeable $\lambda(A)$ (ID cov./act.\ w $\to$ continuous $\alpha_{\rm hf}$ cov./act.\ w):}} \\
+Mixture policy & ID ($64$) & Visc.-OOD & $\alpha_{\rm hf}=0.10$ & $\alpha_{\rm hf}=0.25$ & $\alpha_{\rm hf}=0.50$ & $\alpha_{\rm hf}=1.00$ \\
+\midrule
+Locked $\lambda=0.85$ & 90.0/0.1397 & 95.3/0.3336 & 85.8/0.1371 & 73.7/0.1472 & 53.0/0.1743 & 36.8/0.2444 \\
+Phys-Gate ($\lambda_{\min}=0.25$) & 90.1/0.1402 & 95.6/0.3411 & 86.0/0.1375 & 73.9/0.1476 & 53.2/0.1747 & 37.1/0.2454 \\
+Phys-Gate ($\lambda_{\min}=0.00$) & 90.1/0.1402 & 95.6/0.3434 & 86.0/0.1375 & 73.8/0.1476 & 53.2/0.1747 & 37.1/0.2455 \\
+Spec+Phys ($\lambda_{\min}=0.00$) & 90.1/0.1402 & 95.6/0.3434 & 91.4/0.4072 & 92.4/0.4305 & 93.7/0.4987 & 91.0/0.6873 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

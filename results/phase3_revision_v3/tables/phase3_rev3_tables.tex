@@ -1,0 +1,86 @@
+% Auto-generated Revision v3 tables from task1_opnorm_gamma.json and task3_kernel_horizon.json
+
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.3pt}
+\caption{Darcy $64^2$ high-contrast structural OOD-B diagnostic explaining Liouville DST-II's weaker ranking vs.\ the 5-member ensemble ($\rho=0.489$ vs.\ $0.514$). Retaining the piecewise-constant permeability potential in \texttt{AMG-V2} / \texttt{AMG-PCG2} restores operator-aligned localization ($\rho=0.821/0.725$, $\cos=0.992/0.898$, $\overline\rho_i=2.03/1.92$, ID width $0.0083$--$0.0100$), confirming that the OOD-B limitation stems from Liouville's constant-coefficient potential approximation rather than the Physics-as-Scale principle itself. Note that locked-threshold \texttt{AMG} OOD-B coverage drops to $62.6\%/64.0\%$ because non-stationary coefficient jumps inflate fine-scale model error disproportionately relative to ID ($0.0289/0.0302$ vs.\ Liouville's high-variance $0.1873$).}
+\label{tab:opres-oodb-amg}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Scale proxy & $\cos(Z_h, e_h)$ & Spearman $\rho$ & PeakCap@5\% & $\overline\rho_i$ & $\rho_{\rm cross}$ & ID cov./m90 w & OOD-B cov./m90 w \\
+\midrule
+Liouville DST-II & $0.186 \pm 0.154$ & $0.489 \pm 0.018$ & 23.0\% & $0.98 \pm 0.06$ & $0.200 \pm 0.104$ & 90.20\%/0.0173 & 91.64\%/0.1110 \\
+AMG-V2 (linear) & $0.992 \pm 0.000$ & $0.821 \pm 0.006$ & 88.8\% & $2.03 \pm 0.08$ & $0.668 \pm 0.068$ & 91.32\%/0.0083 & 62.60\%/0.0337 \\
+AMG-PCG2 & $0.898 \pm 0.002$ & $0.725 \pm 0.006$ & 92.9\% & $1.92 \pm 0.13$ & $0.678 \pm 0.022$ & 89.60\%/0.0100 & 63.96\%/0.0378 \\
+5-FNO Ensemble std & -- & $0.514 \pm 0.018$ & 60.0\% & $0.46 \pm 0.04$ & $0.374 \pm 0.066$ & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{1.6pt}
+\caption{Five-seed sensitivity to the all-mode temporal regularization parameter $\gamma$ on Burgers ($64$, locked default $\gamma=0.1$) and Allen--Cahn ($64^2$, locked default $\gamma=0.2$), matching Eqs.~\eqref{eq:burgers-lift} and~\eqref{eq:ac-strang}. For $\gamma=0$, the spatial mean $k=0$ Fourier mode evaluates $\varphi_1(0)=1$. Performance is flat across $\gamma \in [0, 0.2]$ on Burgers and independent Allen--Cahn calibration, whereas overly heavy damping ($\gamma=0.4$) blurs Allen--Cahn $T=2$ independent width ($0.0254$) and destabilizes naive $T=1 \to T=2$ reuse ($38.40\%$, per-seed $26.2$--$47.0\%$).}
+\label{tab:opres-gamma-ablation}
+\begin{tabular}{lrrrrrrr}
+\toprule
+$\gamma$ & Burgers ID $\cos$ & Burgers ID cov./m90 & Visc.-OOD cov./m90 & AC $T=1$ ID cov./m90 & AC React.\ cov./m90 & AC $T=2$ ID cov./m90 & AC $T=1$ 95\%$\to T=2$ cov. \\
+\midrule
+0.0 & 0.723 & 90.40/0.1399 & 95.92/0.2971 & 87.76/0.0107 & 86.36/0.0268 & 90.04/0.0195 & 99.12\% \\
+0.05 & 0.723 & 90.28/0.1394 & 95.52/0.2974 & 88.12/0.0106 & 86.68/0.0264 & 89.92/0.0193 & 99.08\% \\
+0.1 (default) & 0.724 & 90.00/0.1393 & 95.32/0.2975 & 88.40/0.0105 & 87.08/0.0260 & 90.36/0.0192 & 99.04\% \\
+0.2 (AC def.) & 0.725 & 90.44/0.1400 & 95.44/0.2993 & 88.68/0.0103 & 87.84/0.0254 & 90.64/0.0199 & 94.52\% \\
+0.4 & 0.727 & 90.08/0.1392 & 94.84/0.3036 & 88.80/0.0104 & 90.20/0.0252 & 90.92/0.0254 & 38.40\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{1.8pt}
+\caption{Continuous scan of calibration-grid pixel kernel width $\ell_{\rm pix,train}$ across five seeds ($\alpha=0.10$): zero-shot cross-resolution transfer under \textbf{fixed-physical-radius} vs.\ \textbf{fixed-cell-footprint} on Darcy $32^2 \to 128^2$ and Burgers $64 \to 256$ (reporting calibration-grid coverage and target-grid cov./actual width). Bottom: comparison on held-out Darcy $128^2$ against global scalar radius extrapolation in the spirit of Millard et al.~\cite{millard2025function} fit from paired $(32^2, 64^2)$ Uniform-CP quantiles ($h$ and $h^2$ scaling).}
+\label{tab:opres-kernel-scan}
+\begin{tabular}{lrrrrrr}
+\toprule
+$\ell_{\rm pix,train}$ & Darcy $32^2$ cov. & Darcy $128^2$ Fix-Phys (cov./w) & Darcy $128^2$ Fix-Cell (cov./w) & Burgers $64$ cov. & Burgers $256$ Fix-Phys (cov./w) & Burgers $256$ Fix-Cell (cov./w) \\
+\midrule
+0.64 & 89.92\% & 88.44/0.0245 & 86.84/0.0237 & 91.08\% & 94.96/0.1631 & 65.52/0.1565 \\
+1.00 & 90.00\% & 78.20/0.0254 & 89.64/0.0242 & 89.96\% & 92.68/0.1417 & 64.32/0.1342 \\
+1.28 & 90.00\% & 69.08/0.0256 & 90.40/0.0243 & 89.88\% & 92.12/0.1381 & 67.56/0.1298 \\
+1.50 & 90.36\% & 63.00/0.0259 & 90.80/0.0244 & 89.68\% & 91.36/0.1377 & 71.60/0.1287 \\
+2.00 & 90.68\% & 49.84/0.0262 & 91.08/0.0245 & 89.12\% & 88.84/0.1405 & 79.08/0.1298 \\
+2.56 & 90.56\% & 42.08/0.0265 & 89.20/0.0245 & 88.96\% & 85.20/0.1473 & 86.00/0.1348 \\
+3.00 & 90.56\% & 38.28/0.0270 & 87.52/0.0247 & 88.96\% & 82.96/0.1546 & 90.40/0.1405 \\
+4.00 & 90.96\% & 37.20/0.0287 & 83.88/0.0260 & 89.04\% & 79.44/0.1719 & 95.64/0.1542 \\
+\midrule
+\multicolumn{7}{l}{\textbf{Held-out Darcy $128^2$ scalar radius extrapolation vs.\ OpRes-CP (five seeds, mean $\pm$ SD):}} \\
+Uniform-CP zero-shot ($32^2\to 128^2$) & \multicolumn{2}{r}{cov.: $79.52 \pm 14.42$\%} & \multicolumn{2}{r}{actual width: $0.0514 \pm 0.0105$} & \multicolumn{2}{r}{--} \\
+Millard-style Uniform ($\hat q(h)$ lin.) & \multicolumn{2}{r}{cov.: $88.00 \pm 1.83$\%} & \multicolumn{2}{r}{actual width: $0.0653 \pm 0.0211$} & \multicolumn{2}{r}{$h^2$: 87.36\% / 0.0626} \\
+OpRes-CP zero-shot (Fixed-Cell) & \multicolumn{2}{r}{cov.: $90.88 \pm 2.69$\%} & \multicolumn{2}{r}{actual width: $0.0246 \pm 0.0014$} & \multicolumn{2}{r}{$+$Millard lin.: 89.04\% / 0.0235} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.0pt}
+\caption{Stiller-style~\cite{stiller2026timedependent} temporal state-reweighted WCP on Allen--Cahn $T=1 \to T=2$ (using strictly $T=1$ labeled calibration scores reweighted toward unlabeled $T=2$ states $u(T_2)$ with $C=1$, $\mathrm{cap}=50$, five seeds). Full-grid split-fit state density ratios collapse effective sample size to $\mathrm{ESS}=34.5$ across the 250-sample half, whereas causal operator lifting (\texttt{OpRes-CP}, Table~\ref{tab:opres-horizon}) scales interval magnitude naturally across horizons with $\mathrm{ESS}$ untouched when $T=2$ calibration is available.}
+\label{tab:opres-temporal-wcp}
+\begin{tabular}{llrrrrr}
+\toprule
+Method / state features & Protocol & Cov.\ (\%) & Inf.\ (\%) & Fin.\ cov.\ (\%) & Fin.\ width & ESS \\
+\midrule
+Unweighted $T=1$ ($90\%$) & Zero-shot & 82.48 & 0.00 & 82.48 & 0.0194 & 500.0 \\
+Unweighted $T=1$ ($95\%$ heuristic) & Zero-shot & 94.52 & 0.00 & 94.52 & 0.0208 & 500.0 \\
+Compact physical summary (3D) & Transductive & 82.44 & 1.40 & 82.18 & 0.0197 & 87.1 \\
+Compact physical summary (3D) & Split-fit & 87.56 & 4.20 & 87.01 & 0.0202 & 55.8 \\
+Full-grid state $u(T)$ ($4098$-D) & Transductive & 78.84 & 3.28 & 78.08 & 0.0189 & 242.9 \\
+Full-grid state $u(T)$ ($4098$-D) & Split-fit & 93.72 & 0.00 & 93.72 & 0.0209 & 34.5 \\
+\bottomrule
+\end{tabular}
+\end{table}

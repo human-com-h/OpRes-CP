@@ -1,0 +1,19 @@
+% Auto-generated booktabs LaTeX tables. Requires booktabs.
+
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.0pt}
+\caption{Five-seed end-to-end Allen--Cahn FNO latency (P50 ms per trajectory on RTX 4060; frozen sealed checkpoints) comparing CPU post-processing, full GPU-resident Strang lift plus periodic Gaussian envelope, five-member ensemble, and $K=30$ MC-Dropout. Max parity reports the worst-seed relative $L^2$ scale discrepancy between GPU-resident and CPU SciPy implementations.}
+\label{tab:opres-ac-gpu}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Setting & CPU post & GPU full & Ens-5 & MC-30 & Speedup vs.\ Ens & Batch-8 (Op / Ens) & Max parity \\
+\midrule
+$64^2$, $T=1$ & 107.38 & 126.05 & 417.41 & 2426.34 & 3.31$\times$ & 13.49 vs.\ 53.66 & 5.0e-06 \\
+$64^2$, $T=2$ & 198.39 & 221.36 & 818.01 & 4898.49 & 3.70$\times$ & 28.88 vs.\ 116.39 & 3.8e-06 \\
+$128^2$, $T=1$ & 139.35 & 121.73 & 445.31 & 2406.30 & 3.66$\times$ & 13.60 vs.\ 50.92 & 5.2e-06 \\
+$128^2$, $T=2$ & 234.52 & 226.29 & 836.81 & 5672.38 & 3.70$\times$ & 30.85 vs.\ 112.30 & 4.5e-06 \\
+\bottomrule
+\end{tabular}
+\end{table*}

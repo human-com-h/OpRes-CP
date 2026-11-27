@@ -1,0 +1,19 @@
+{
+  "seeds": [42, 137, 314],
+  "coarse": 64,
+  "fine": 128,
+  "counts": {"train": 800, "val": 100, "cal": 300, "id_test": 300, "paired_test": 500, "ood_a": 300, "ood_b": 300},
+  "sigma": {"id_mean": 1.0, "ood_a_mean": 1.35, "std": 0.35, "bounds": [0.4, 2.0], "ood_b_bounds": [1.6, 1.8]},
+  "field_modes": 32,
+  "correlation_length": 0.08,
+  "model": {"modes": 12, "width": 32, "layers": 4, "epochs": 30, "batch_size": 8, "learning_rate": 0.001},
+  "alpha": 0.1,
+  "physical_radius": 0.04,
+  "relative_floor": 0.1,
+  "absolute_floor": 1e-10,
+  "bootstrap_resamples": 2000,
+  "min_ess": 30,
+  "weight_clip": [0.02, 50.0],
+  "stable_width_relative": 0.15,
+  "pi_coverage_drop": 0.05
+}

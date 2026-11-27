@@ -1,0 +1,68 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{1.6pt}
+\caption{Five-seed 2D plane-strain linear elasticity FEM benchmark on $\Omega=(0,1)^2\setminus B_{0.20}(0.5,0.5)$ around a single frozen Vector DeepONet ($\alpha=0.10$; coarse calibration grid $\mathcal{T}_c$: $1{,}164$ nodes, fine paired grid $\mathcal{T}_f$: $4{,}144$ nodes). Entries report simultaneous coverage (\%) / matched-$90\%$ full width for both vector displacement $\mathbf u_h$ and derived von Mises stress $\sigma_{\rm vM}$. Classical mesh-dependent BR and ZZ estimators collapse under zero-shot $h\to h/2$ transfer, and \texttt{Jha Corr.+Unif-CP} drops to $8.56\%$ von Mises coverage under OOD-Lam\'e ($\nu_{\rm P}\in[0.34,0.43]$), whereas \texttt{OpRes-CP (SA-AMG-V2)} narrows ID bands $4.5$--$4.8\times$ vs.\ the 5-member ensemble and retains $93.00\%$ OOD von Mises coverage.}
+\label{tab:opres-elasticity}
+\fitcmametable{%
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{Vector displacement $\mathbf u_h$ (cov.\ / m90 w)} & \multicolumn{3}{c}{Derived von Mises stress $\sigma_{\rm vM}$ (cov.\ / m90 w)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Method & ID ($\mathcal{T}_c$) & Paired Fine ($\mathcal{T}_f$) & OOD-Lam\'e & ID ($\mathcal{T}_c$) & Paired Fine ($\mathcal{T}_f$) & OOD-Lam\'e \\
+\midrule
+Uniform-CP & 90.52/0.4625 & 88.72/0.4906 & 34.16/1.2217 & 89.20/5.148 & 80.44/6.008 & 45.16/13.160 \\
+FEM BR/Verf\"urth + CP & 91.96/0.5058 & 7.80/0.5211 & 71.20/1.8085 & 90.00/3.207 & 0.00/3.646 & 98.24/5.376 \\
+Zienkiewicz--Zhu + CP & 92.20/0.5957 & 6.52/0.6775 & 73.88/2.0371 & 89.64/3.697 & 0.00/4.561 & 98.96/5.692 \\
+Jha Corr.\ + Uniform-CP & 89.48/0.1490 & 84.36/0.1750 & 40.32/0.4514 & 89.56/0.275 & 73.32/0.378 & 8.56/1.392 \\
+Jha Corr.\ + OpRes-CP & 89.68/0.0509 & 76.36/0.0690 & 50.28/0.2310 & 90.32/0.109 & 71.76/0.159 & 75.76/0.459 \\
+5-DeepONet Ens.\ (mean) & 90.00/0.9893 & 80.92/1.1919 & 77.24/3.3088 & 90.16/8.440 & 79.44/11.091 & 91.44/16.376 \\
+Unsigned Vector AMG-V2 & 91.00/0.9987 & 89.28/1.0709 & 85.80/2.1705 & 90.28/7.069 & 84.00/8.184 & 89.76/14.527 \\
+\textbf{OpRes-CP (SA-AMG-V2)} & 88.96/0.2060 & 73.80/0.2360 & 74.88/0.6265 & 89.52/1.863 & 30.28/2.317 & 93.00/3.354 \\
+OpRes-CP (Exact $K^{-1}$) & 89.12/0.1849 & 75.92/0.2039 & 97.92/0.3959 & 89.80/1.864 & 33.32/2.327 & 95.44/3.383 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{1.8pt}
+\caption{Top: Five-seed exact discrete nonlinear remainder decomposition verifying quadratic scaling ($N_h \propto \|e_h\|_2^2$, log--log slope $\approx 2$) and explaining fine-grid U-Net breakdown when errors exit the first-order neighborhood. Bottom: Five-seed comparison against Jha-style~\cite{jha2024residual} variational point correction ($\widehat U_h - B_h R_h$): point rel.\ $L^2$ (\%) / simultaneous cov.\ (\%) / matched-$90\%$ width (plus single-case P50 ms).}
+\label{tab:opres-nonlinear-jha}
+\fitcmametable{%
+\begin{tabular}{llrrrrr}
+\toprule
+\multicolumn{7}{l}{\textbf{(A) Exact discrete residual decomposition ($Z_h = B_h L_h^{\rm lin}e_h + B_h G_h + B_h N_h + B_h \tau_h$):}} \\
+PDE / Backbone & Split & Point $L^2$ (\%) & $\|B_h N_h\|_2/\|e_h\|_2$ & $\|B_h G_h\|_2/\|e_h\|_2$ & $\|B_h \tau_h\|_2/\|e_h\|_2$ & $N_h$ log--log slope \\
+\midrule
+Burgers FNO & ID ($64$) & 2.16\% & 0.018 & -- & 0.725 & 2.10 \\
+Burgers FNO & Visc.-OOD & 5.01\% & 0.066 & -- & 0.893 & 2.02 \\
+Burgers FNO & High-OOD & 5.45\% & 0.034 & -- & 0.318 & 2.04 \\
+Burgers U-Net & Paired $64$ & 3.64\% & 0.047 & -- & 0.412 & 2.25 \\
+Burgers U-Net & Paired $256$ & 58.15\% & 0.539 & -- & 0.027 & 1.96 \\
+\addlinespace[2pt]
+AC StepFNO & $T=1$ ID & 0.62\% & 0.003 & 0.037 & 0.027 & 2.58 \\
+AC StepFNO & $T=1$ React. & 1.43\% & 0.010 & 0.091 & 0.038 & 2.21 \\
+AC StepFNO & $T=2$ ID & 1.25\% & 0.008 & 0.015 & 0.017 & 2.28 \\
+AC StepUNet & $T=2$ $64^2$ & 1.17\% & 0.008 & 0.015 & 0.021 & 2.32 \\
+AC StepUNet & $T=2$ $128^2$ & 16.02\% & 0.100 & 0.005 & 0.001 & 2.08 \\
+\midrule
+\multicolumn{7}{l}{\textbf{(B) Jha-style variational point corrector vs.\ OpRes-CP \& orthogonal stacking (pt $L^2$\% / cov\% / m90 width):}} \\
+Benchmark & Method & ID & Shift-1 & Shift-2 & Latency (ms) & Role \\
+\midrule
+Darcy $64^2$ & OpRes-CP (Liouville) & 4.85/90.2/0.0173 & 8.99/88.5/0.0455 & 17.62/91.6/0.1110 & 5.33 & Scale only \\
+Darcy $64^2$ & OpRes-CP (AMG-V2) & 4.85/91.3/0.0083 & 8.99/90.4/0.0179 & 17.62/62.6/0.0337 & 8.05 & Scale (var-coeff.) \\
+Darcy $64^2$ & Liouville Corr. + Unif-CP & 4.52/89.3/0.0517 & 11.48/65.4/0.1750 & 82.64/0.1/0.3460 & 5.33 & Cheap Jha corr. \\
+Darcy $64^2$ & Jha AMG-V2 Corr. + Unif-CP & 0.98/90.3/0.0046 & 1.66/71.0/0.0083 & 3.54/34.9/0.0137 & 8.05 & Contractive Jha \\
+Darcy $64^2$ & Jha Exact spsolve + Unif-CP & 0.00/90.6/0.0000 & 0.00/70.8/0.0000 & 0.00/14.2/0.0000 & 11.53 & Oracle Jha \\
+Darcy $64^2$ & Jha AMG-V2 + OpRes-CP & 0.98/89.7/0.0009 & 1.66/75.9/0.0018 & 3.54/68.5/0.0037 & 10.94 & Orthogonal stack \\
+\addlinespace[2pt]
+Burgers $64$ & OpRes-CP (frozen FNO) & 2.16/90.0/0.1393 & 5.01/95.3/0.2975 & 5.45/35.6/0.3971 & 6.48 & Scale only \\
+Burgers $64$ & Jha 1-step Corr. + Unif-CP & 2.02/89.3/0.7563 & 5.61/50.3/1.8745 & 3.29/86.2/0.8445 & 6.39 & Causal Jha corr. \\
+Burgers $64$ & Jha 1-step Corr. + OpRes-CP & 2.02/89.8/0.2310 & 5.61/98.2/0.6044 & 3.29/96.5/0.3107 & 9.83 & Orthogonal stack \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

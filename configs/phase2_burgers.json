@@ -1,0 +1,10 @@
+{
+  "base": "configs/phase1_burgers.json",
+  "seeds": [42,137,314,271,811],
+  "streams": {"train": 6301, "val": 6302, "cal": 6303, "id": 6304, "paired": 6305, "ood": 6306, "ood_high": 6307},
+  "counts": {"train": 2000, "val": 250, "cal": 500, "id": 500, "paired": 500, "ood": 500, "ood_high": 500},
+  "alpha_levels": [0.1,0.05],
+  "epochs": 65,
+  "point_failure_rel_l2": 0.15,
+  "gate_p_test_thresholds": [0.001,0.002,0.005,0.01,0.025,0.05,0.1]
+}

@@ -1,0 +1,23 @@
+{
+  "seed": 42,
+  "streams": {"train": 2101, "val": 2102, "cal": 2103, "id": 2104, "paired": 2105, "ood": 2106},
+  "counts": {"train": 900, "val": 150, "cal": 300, "id": 300, "paired": 400, "ood": 300},
+  "grids": [64, 128, 256],
+  "reference_grid": 512,
+  "frames": 16,
+  "frame_dt": 0.1,
+  "steps_per_frame": 25,
+  "viscosity_id": [0.02, 0.07],
+  "viscosity_ood": [0.009, 0.028],
+  "model": {"modes": 20, "width": 48, "depth": 4, "epochs": 65, "batch": 32, "lr": 0.002},
+  "alpha": 0.1,
+  "lambdas": [0.0, 0.35, 0.60, 0.85, 1.0],
+  "gamma": 0.1,
+  "spatial_radius": 0.08,
+  "envelope_relative_floor": 0.1,
+  "advection_substeps": 4,
+  "weight_clip": [0.02, 50.0],
+  "min_ess": 30,
+  "bootstrap_seed": 6187,
+  "bootstrap_resamples": 2000
+}

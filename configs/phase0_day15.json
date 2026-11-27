@@ -1,0 +1,11 @@
+{
+  "base_config": "configs/phase0_darcy.json",
+  "model_seed": 42,
+  "split_streams": {"val": 1501, "id_test": 1502, "paired_test": 1503, "ood_a": 1504, "ood_b": 1505},
+  "bootstrap_seed": 5617,
+  "lambdas": [0.0, 0.15, 0.35, 0.60, 0.85, 1.0],
+  "weight_logistic_c": 1.0,
+  "risk_ess_thresholds": [0, 30, 60, 100, 150, 200, 300],
+  "risk_p_test_thresholds": [0.1, 0.05, 0.025, 0.01, 0.005, 0.0025, 0.001],
+  "gate": {"id_width_margin": 0.05, "coverage_gain": 0.05, "ood_width_gain": 0.10, "max_abstention": 0.05}
+}

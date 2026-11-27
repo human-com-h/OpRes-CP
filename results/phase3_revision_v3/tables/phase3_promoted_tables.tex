@@ -1,0 +1,54 @@
+% Auto-generated booktabs LaTeX tables. Requires booktabs.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\caption{Same-protocol five-seed FNO comparison across all evaluated baselines at $\alpha=0.10$. ID columns report simultaneous coverage (\%) / matched $90\%$ full width (for LSCI 64-draw envelope, actual finite width); OOD columns report simultaneous coverage (\%) at the locked source threshold.}
+\label{tab:opres-all-baselines}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Method & Darcy ID & OOD-A & OOD-B & Burgers ID & Visc. & High & AC $T=1$ ID & React. \\
+\midrule
+Uniform-CP & 90.00 / 0.0471 & 70.52 & 41.92 & 89.88 / 0.5433 & 50.92 & 62.60 & 89.40 / 0.1064 & 46.40 \\
+Choi CP-B & 90.48 / 0.0611 & 69.72 & 75.08 & 90.60 / 0.5315 & 51.72 & 57.20 & 89.28 / 0.1085 & 46.24 \\
+Full-Field PI-CP & 90.00 / 0.1274 & 70.96 & 53.80 & 89.48 / 0.5799 & 50.44 & 46.52 & 89.32 / 0.1051 & 38.28 \\
+Physics-Scalar CP & 90.48 / 0.0338 & 83.16 & 99.88 & 90.64 / 0.4096 & 90.48 & 90.68 & -- & -- \\
+Defect Corr.\ + CP & 89.28 / 0.0517 & 65.44 & 0.08$^*$ & -- & -- & -- & -- & -- \\
+Mabtoul-adapted CW & 90.60 / 0.0282 & 72.36 & 0.36 & -- & -- & -- & -- & -- \\
+\addlinespace[3pt]
+LSCI (native set)$^\dagger$ & 90.60 / -- & 82.64 & 99.88 & 89.40 / -- & 77.56 & 61.04 & 89.60 / -- & 74.04 \\
+LSCI (64-draw env.)$^\dagger$ & 3.52 / 0.011 & 2.44 & 99.40 & 2.32 / 0.109 & 5.92 & 1.20 & 0.20 / 0.019 & 3.32 \\
+LSCI (Val-Fit band)$^\dagger$ & 90.80 / 0.0408 & 85.04 & 100.00 & 90.40 / 0.4656 & 64.96 & 34.92 & 88.68 / 0.1052 & 67.40 \\
+5-FNO Ensemble (mean) & 90.40 / 0.0539 & 78.20 & 69.20 & 90.16 / 0.2648 & 61.16 & 83.28 & 87.48 / 0.1365 & 88.80 \\
+MC-Dropout & 89.60 / 0.0701 & 76.56 & 94.44 & 89.52 / 0.3888 & 52.96 & 62.36 & 89.12 / 0.1918 & 73.52 \\
+OpRes-CP (ours) & 90.20 / 0.0173 & 88.48 & 91.64 & 90.00 / 0.1393 & 95.32 & 35.60 & 88.68 / 0.0103 & 87.84 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\raggedright\footnotesize $^*$Under Darcy OOD-B, one-step Defect Correction increases point relative $L^2$ error from $17.62\%$ to $82.64\%$ ($18.30\%$ to $89.47\%$ on U-Net, $0.00\%$ coverage). Mabtoul-adapted CW drops to $0.36\%$ on FNO and $0.00\%$ on U-Net. $^\dagger$RLCP-weighted LSCI (Appendix Tables~\ref{tab:opres-lsci}--\ref{tab:opres-lsci-fair}); LSCI (Val-Fit band) fits local coordinate scale on disjoint Validation residuals (eliminating in-sample denominator leakage) and calibrates with the exact weighted max-conformal quantile on 500 Cal residuals, whereas native set (32 projections) and 64-draw envelope measure distinct events.
+\end{table}
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\caption{Model-agnostic OpRes-CP performance across architectures (five seeds, $\alpha=0.10$). Width vs.\ Unif.\ is the five-seed mean paired reduction in matched $90\%$ width relative to Uniform-CP. OOD-1 / OOD-2 are Darcy contrast / structure, Burgers viscosity / high-frequency, and Allen--Cahn reaction / --. Transfer columns show paired coverage change in percentage points ($\Delta$).}
+\label{tab:opres-cross-arch}
+\begin{tabular}{llrrrrlrr}
+\toprule
+PDE & Backbone & ID cov. & Width vs.\ Unif. & OOD-1 & OOD-2 & Transfer & OpRes $\Delta$ & Unif.\ $\Delta$ \\
+\midrule
+Darcy & FNO & 90.20 & 63.05\% & 88.48 & 91.64 & $64^2\!\to\!128^2$ & $-1.44$ & $-0.08$ \\
+Darcy & U-Net & 91.24 & 45.77\% & 90.68 & 96.72 & -- & -- & -- \\
+Darcy & DeepONet & 90.32 & 58.49\% & 91.56 & 82.64 & $64^2\!\to\!128^2$ & $-0.16$ & $+0.12$ \\
+\addlinespace[3pt]
+Burgers & FNO & 90.00 & 74.23\% & 95.32 & 35.60 & $64\!\to\!256$ & $+3.56$ & $-15.48$ \\
+Burgers & U-Net & 90.48 & 85.79\% & 89.20 & 87.08 & $64\!\to\!256$ & $-47.00$ & $-88.84$ \\
+Burgers & DeepONet & 89.76 & 75.77\% & 67.44 & 89.04 & $64\!\to\!256$ & $+7.24$ & $-0.76$ \\
+\addlinespace[3pt]
+Allen--Cahn $T=1$ & FNO & 88.68 & 90.34\% & 87.84 & -- & $64^2\!\to\!128^2$ & $-0.36$ & $-0.48$ \\
+Allen--Cahn $T=1$ & U-Net & 88.88 & 85.83\% & 88.28 & -- & $64^2\!\to\!128^2$ & $+11.48$ & $-88.60$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip\raggedright\footnotesize Note: On Burgers $64\!\to\!256$, the non-resolution-invariant U-Net's point relative $L^2$ error jumps $16\times$ ($3.64\%\to 58.15\%$); Uniform-CP collapses to $1.64\%$ ($-88.84$ pp), whereas OpRes-CP automatically inflates band width by $15.67\times$ to expose the backbone collapse.
+\end{table}

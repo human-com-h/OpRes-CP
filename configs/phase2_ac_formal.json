@@ -1,0 +1,16 @@
+{
+  "base": "configs/phase2_ac_probe.json",
+  "seeds": [42, 137, 314, 271, 811],
+  "streams": {"train": 7301, "val": 7302, "cal": 7303, "id": 7304, "paired": 7305, "ood": 7306},
+  "counts": {"train": 1200, "val": 250, "cal": 500, "id": 500, "paired": 500, "ood": 500},
+  "inverse": "reaction_strang",
+  "positive_damping": 0.0,
+  "max_growth": 1.5,
+  "width": 24,
+  "modes": 12,
+  "layers": 4,
+  "epochs": 32,
+  "train_steps_per_epoch": 64,
+  "batch": 12,
+  "alpha_levels": [0.1, 0.05]
+}

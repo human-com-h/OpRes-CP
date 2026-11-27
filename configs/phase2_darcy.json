@@ -1,0 +1,16 @@
+{
+  "seeds": [42,137,314,271,811],
+  "primary_grid": 64, "fine_grid": 128, "transfer_grid": 32,
+  "counts": {"train": 1500, "val": 250, "cal": 500, "id_test": 500, "paired_test": 500, "ood_a": 500, "ood_b": 500},
+  "streams": {"train": 5201, "val": 5202, "cal": 5203, "id_test": 5204, "paired_test": 5205, "ood_a": 5206, "ood_b": 5207},
+  "ensemble_init_offsets": [0,10000,20000,30000,40000],
+  "alpha": [0.1,0.05],
+  "lambda": 0.85,
+  "inverse": "liouville",
+  "min_ess": 30,
+  "point_failure_rel_l2": 0.15,
+  "gate_p_test_thresholds": [0.001,0.002,0.005,0.01,0.025,0.05,0.1],
+  "regression_pixels_per_field": 128,
+  "bootstrap_seed": 6187,
+  "bootstrap_resamples": 2000
+}

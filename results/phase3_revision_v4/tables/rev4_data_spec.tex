@@ -1,0 +1,21 @@
+% Auto-generated Revision v4 Appendix B.1 Data & Solver Spec Table (pure ASCII).
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{1.8pt}
+\caption{Complete data-generation distributions, OOD shifts, partition sizes (per formal seed $s \in \{42,137,314,271,811\}$), and reference solvers extracted directly from the repository scripts.}
+\label{tab:opres-data-spec}
+\fitcmametable{%
+\begin{tabular}{ll>{\raggedright\arraybackslash}p{4.3cm}>{\raggedright\arraybackslash}p{3.9cm}>{\raggedright\arraybackslash}p{3.2cm}}
+\toprule
+Benchmark & Domain / Grids & Input distribution (ID) & OOD shifts & Reference solver \& counts \\
+\midrule
+Darcy ($[0,1]^2$) & $64^2$, $128^2$, $32^2$ & $\log a$: $32\!\times\!32$ cosine modes, $\ell=0.08$, decay $(1+(\pi\ell)^2|k|^2)^{-1.25}$, $\sigma\sim\mathcal N(1.0,0.35^2)$ trunc.\ $[0.4,2.0]$ & Contrast (OOD-A): $\mathcal N(1.35,0.35^2)$ trunc.\ $[0.4,2.0]$; Structure (OOD-B): $8\!\times\!8$ blocks $\in\{-2,-0.5,1,2.5\}$, $\sigma\sim\mathcal U[1.6,1.8]$ & Cell FVM, harmonic faces, exact \texttt{spsolve}; 1500/250/500/500 \\
+L-shape Darcy & $\Omega_L$, $64^2$ ($3072$), $128^2$ ($12288$) & Same $\log a$ cosine generator masked to $\Omega_L=(0,1)^2\setminus[0.5,1)^2$, $u|_{\partial\Omega_L}=0$ & Contrast OOD-A: $\mathcal N(1.35,0.35^2)$ trunc.\ $[0.4,2.0]$ & Masked FVM \texttt{spsolve} (res.\ $<10^{-11}$); 800/200/300/300 \\
+Burgers 1D & $[0,2\pi)$, $64/128/256$, $T=1.6$ ($16\times 0.1$) & $\nu\sim\mathrm{LogUnif}[0.02,0.07]$; $u_0$: modes $1$--$8$ $\propto k^{-1.35}$, AC rms $\sim\mathcal U[0.55,1.25]$, mean $\sim\mathcal U[-0.4,0.4]$ & Visc.-OOD: $\nu\sim\mathrm{LogUnif}[0.009,0.028]$; High-OOD: adds modes $9$--$16$; Noisy stress $\eta_{\rm noise}\in[0,0.20]$ & 512-pt dealiased ETDRK2 ($\delta t=4\!\times\!10^{-3}$); 2000/250/500/500 \\
+Allen--Cahn 2D & $[0,2\pi)^2$, $64^2/128^2$, $T=1$ ($20$), $T=2$ ($40$) & $\nu\sim\mathcal U[0.02,0.06]$, $\rho\sim\mathcal U[0.5,1.1]$; $u_0$: radial $k^2\le 16$, $(1+k^2)^{-0.65}$, rms $\sim\mathcal U[0.35,0.8]$ & React.-OOD: $\rho\sim\mathcal U[0.9,1.5]$; indep.\ $T=2$ horizon streams ($9401$--$9404$) & 128$^2$ dealiased ETDRK2 ($\delta t=5\!\times\!10^{-3}$); 1200/250/500/500 \\
+2D Elasticity & $\Omega_{\rm plate}$, $\mathcal T_c$ ($1164$), $\mathcal T_f$ ($4144$) & $\log E$: $12\!\times\!12$ cosine ($\ell=0.15$), $\sigma_{\log E}\sim\mathcal U[0.25,0.55]$, $\nu_{\rm P}\sim\mathcal U[0.20,0.34]$, $t_x,t_y$ random & OOD-Lam\'e: $\sigma_{\log E}\sim\mathcal U[0.55,0.85]$, $\nu_{\rm P}\sim\mathcal U[0.34,0.43]$ (near-incompressible) & $P_1$ FEM exact \texttt{spsolve} (Patch $<10^{-12}$); 1000/200/400/500 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

@@ -1,0 +1,32 @@
+{
+  "seed": 137,
+  "weights": {
+    "darcy32": {
+      "file": "darcy32.pt",
+      "sha256": "c6dcba7bcc53ec6aaa6b622d1e0d6d9661247c69d04d77700b80abb565c1a2c0"
+    },
+    "darcy64": {
+      "file": "darcy64.pt",
+      "sha256": "34f8f5f114ae4aa3c241ebf2c3ce63c42e1f2ae06e5836fe50da51d80c74b084"
+    },
+    "burgers": {
+      "file": "burgers.pt",
+      "sha256": "0da2de1e3b71c15b4f73318e63bfd534627e090face303d51d528c684aa67200"
+    },
+    "allen_cahn": {
+      "file": "allen_cahn.pt",
+      "sha256": "5c9c0244d3b3f77ada1b68d5ea49918e7a45f4aa91945bcdb493d16ee60c1a23"
+    },
+    "allen_cahn_unet": {
+      "file": "allen_cahn_unet.pt",
+      "sha256": "7dd19df0f3172fd675620f907b3c8012322faa9c189f5afbbc8afdb27bbe0626"
+    }
+  },
+  "training_seconds": {
+    "darcy32": 66.78489908499887,
+    "darcy64": 73.73575195599997,
+    "burgers": 37.58910956900024,
+    "allen_cahn": 75.13547286700054,
+    "allen_cahn_unet": 327.2047090380006
+  }
+}

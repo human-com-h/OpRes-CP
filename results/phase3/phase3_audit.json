@@ -1,0 +1,113 @@
+{
+  "darcy": {
+    "42": {
+      "groups": 8,
+      "hash_matches": 7,
+      "opres_comparisons": 12,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 6.006496666710603e-08
+    },
+    "137": {
+      "groups": 8,
+      "hash_matches": 7,
+      "opres_comparisons": 12,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 3.9295920184478916e-08
+    },
+    "314": {
+      "groups": 8,
+      "hash_matches": 7,
+      "opres_comparisons": 12,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 4.856865287727885e-08
+    },
+    "271": {
+      "groups": 8,
+      "hash_matches": 7,
+      "opres_comparisons": 12,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 3.745644705510642e-08
+    },
+    "811": {
+      "groups": 8,
+      "hash_matches": 7,
+      "opres_comparisons": 12,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 4.984433865651283e-08
+    }
+  },
+  "burgers": {
+    "42": {
+      "groups": 4,
+      "hash_matches": 4,
+      "opres_comparisons": 6,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 4.481976700887458e-08
+    },
+    "137": {
+      "groups": 4,
+      "hash_matches": 4,
+      "opres_comparisons": 6,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 8.445873023177342e-08
+    },
+    "314": {
+      "groups": 4,
+      "hash_matches": 4,
+      "opres_comparisons": 6,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 5.051893470220392e-08
+    },
+    "271": {
+      "groups": 4,
+      "hash_matches": 4,
+      "opres_comparisons": 6,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 6.601735524913721e-08
+    },
+    "811": {
+      "groups": 4,
+      "hash_matches": 4,
+      "opres_comparisons": 6,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 4.715477364136689e-08
+    }
+  },
+  "allen_cahn": {
+    "42": {
+      "groups": 5,
+      "hash_matches": 3,
+      "opres_comparisons": 4,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 2.3687644623571202e-08
+    },
+    "137": {
+      "groups": 5,
+      "hash_matches": 3,
+      "opres_comparisons": 4,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 1.941178640052499e-08
+    },
+    "314": {
+      "groups": 5,
+      "hash_matches": 3,
+      "opres_comparisons": 4,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 1.1209833838954353e-08
+    },
+    "271": {
+      "groups": 5,
+      "hash_matches": 3,
+      "opres_comparisons": 4,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 3.030047102114963e-08
+    },
+    "811": {
+      "groups": 5,
+      "hash_matches": 3,
+      "opres_comparisons": 4,
+      "max_coverage_difference": 0.0,
+      "max_relative_width_difference": 1.1543646705192145e-08
+    }
+  }
+}

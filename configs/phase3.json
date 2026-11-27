@@ -1,0 +1,17 @@
+{
+  "seeds": [42, 137, 314, 271, 811],
+  "alpha": [0.10, 0.05],
+  "burgers_lambdas": [0.0, 0.25, 0.50, 0.70, 0.85, 1.0],
+  "burgers_radii": [0.04, 0.08, 0.16, 0.32],
+  "burgers_shock_relative_strength": 0.25,
+  "burgers_shock_search_cells": 6,
+  "time_strides": [1, 2, 4],
+  "calibration_counts": [100, 200, 400, 500],
+  "id_gate_alpha": [0.01, 0.02],
+  "darcy_trace_rms_fraction": 0.10,
+  "wcp_logistic_c": [0.1, 1.0, 10.0],
+  "wcp_clip": [[0.02, 50.0], [0.05, 20.0], [0.10, 10.0], [0.0, 1000000.0]],
+  "fixed_plot_examples": {"darcy_field": 0, "burgers_trajectory": 0, "allen_cahn_trajectory": 0, "allen_cahn_frames": [10, 20, 40]},
+  "bootstrap_seed": 6187,
+  "bootstrap_resamples": 2000
+}

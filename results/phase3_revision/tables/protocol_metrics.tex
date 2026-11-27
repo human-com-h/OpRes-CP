@@ -1,0 +1,46 @@
+% Auto-generated booktabs LaTeX tables. Requires booktabs.
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{ID auxiliary metrics under the locked $90\%$ whole-field threshold. Entries are five-seed mean $\pm$ SD.}
+\label{tab:paper-pointwise}
+\begin{tabular}{lrrrr}
+\toprule
+Benchmark & Full width & Point cov.\ (\%) & High-grad.\ cov.\ (\%) & High-grad.\ width \\
+\midrule
+Darcy & $0.01729 \pm 0.00137$ & $99.8745 \pm 0.0511$ & $99.9973 \pm 0.0027$ & $0.02789 \pm 0.00272$ \\
+Burgers & $0.13975 \pm 0.00324$ & $99.9861 \pm 0.0021$ & $99.9025 \pm 0.0207$ & $0.31005 \pm 0.00913$ \\
+Allen--Cahn $T=1$ & $0.01017 \pm 0.00056$ & $99.9970 \pm 0.0014$ & $99.9999 \pm 0.0001$ & $0.01356 \pm 0.00073$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Formal ungated WCP at the nominal $90\%$ target. Coverage and infinite rates are percentages. All 500 cases per seed enter the unconditional rates and abstention is zero. Finite coverage and width use the finite subset. Entries are five-seed means.}
+\label{tab:paper-wcp-formal}
+\begin{tabular}{llrrrrrr}
+\toprule
+Target & Weight input & Cov. & Inf. & Finite $n$ & Finite cov. & Finite width & ESS \\
+\midrule
+Darcy contrast & Full & 95.88 & 44.80 & 276.0 & 92.57 & 0.03910 & 189.25 \\
+Darcy contrast & Summary & 89.20 & 0.00 & 500.0 & 89.20 & 0.04681 & 207.71 \\
+Darcy structure & Full & 93.68 & 2.48 & 487.6 & 93.46 & 0.19610 & 121.43 \\
+Darcy structure & Summary & 100.00 & 100.00 & 0.0 & -- & -- & 496.25 \\
+Burgers viscosity & Full & 96.72 & 43.36 & 283.2 & 94.20 & 0.25135 & 91.68 \\
+Burgers viscosity & Spectrum & 97.16 & 52.40 & 238.0 & 93.98 & 0.22881 & 101.43 \\
+Burgers viscosity & Summary & 97.16 & 52.40 & 238.0 & 93.97 & 0.22833 & 101.93 \\
+Burgers high & Full & 35.68 & 0.00 & 500.0 & 35.68 & 0.24508 & 462.56 \\
+Burgers high & Spectrum & 91.40 & 81.04 & 94.8 & 54.90 & 0.17032 & 430.52 \\
+Burgers high & Summary & 36.72 & 0.00 & 500.0 & 36.72 & 0.24822 & 213.16 \\
+Allen--Cahn $T=1$ & Full & 96.80 & 50.96 & 245.2 & 93.55 & 0.01653 & 69.14 \\
+Allen--Cahn $T=1$ & Summary & 96.32 & 47.12 & 264.4 & 93.11 & 0.01637 & 113.69 \\
+Allen--Cahn $T=2$ & Full & 97.72 & 50.96 & 245.2 & 95.58 & 0.03383 & 69.14 \\
+Allen--Cahn $T=2$ & Summary & 96.92 & 47.12 & 264.4 & 94.35 & 0.03353 & 113.69 \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,106 @@
+% Auto-generated booktabs LaTeX tables (Revision v2). Requires booktabs.
+
+\begin{table*}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{1.8pt}
+\caption{Five-seed scale--error spatial fidelity on ID benchmarks (mean $\pm$ SD across formal seeds $42$, $137$, $314$, $271$, and $811$, evaluated against the shared single-FNO error $|e_h|=|\widehat U_h - U_h|$). $\rho$ and $r$ are within-field Spearman and Pearson correlations; PeakRec@10\% is top-decile overlap recall; PeakCap@5\% (\%) is the fraction of cases whose global error peak $x^*$ lies in the top-5\% predicted-scale region; $\tilde\sigma(x^*)=\sigma(x^*)/\overline\sigma$ is normalized peak concentration (Theorem~\ref{thm:fixed}); $\rho_{\rm cross}$ is cross-sample Spearman correlation between $\overline\sigma_i$ and $\|e_i\|_\infty$. Full OOD splits appear in Appendix Table~\ref{tab:opres-fidelity-ood}.}
+\label{tab:opres-fidelity}
+\begin{tabular}{llrrrrrr}
+\toprule
+Benchmark & Frozen scale & $\rho(\sigma,|e|)$ & $r(\sigma,|e|)$ & PeakRec@10\% & PeakCap@5\% & $\tilde\sigma(x^*)$ & $\rho_{\rm cross}$ \\
+\midrule
+Darcy $64^2$ ID & Raw $|R_h|$ (PI-CP) & $-0.046 \pm 0.012$ & $-0.034 \pm 0.008$ & $0.086 \pm 0.005$ & $8.1 \pm 0.9$ & $1.27 \pm 0.05$ & $0.908 \pm 0.010$ \\
+ & Unsigned Inv+env & $0.357 \pm 0.009$ & $0.294 \pm 0.008$ & $0.190 \pm 0.005$ & $12.6 \pm 1.6$ & $1.30 \pm 0.05$ & $0.915 \pm 0.007$ \\
+ & Signed $|Z_h|$ (no env) & $0.724 \pm 0.012$ & $0.751 \pm 0.010$ & $0.575 \pm 0.008$ & $92.9 \pm 1.1$ & $5.29 \pm 0.21$ & $0.913 \pm 0.008$ \\
+ & \textbf{OpRes-CP $\sigma_h$ (ours)} & $0.571 \pm 0.011$ & $0.625 \pm 0.012$ & $0.469 \pm 0.008$ & $72.5 \pm 2.5$ & $3.00 \pm 0.14$ & $0.917 \pm 0.008$ \\
+ & 5-Member Ens.\ std & $0.409 \pm 0.021$ & $0.432 \pm 0.025$ & $0.320 \pm 0.022$ & $69.6 \pm 4.1$ & $2.72 \pm 0.15$ & $0.931 \pm 0.006$ \\
+\addlinespace[3pt]
+Burgers $64$ ID & Raw $|R_h|$ (PI-CP) & $0.430 \pm 0.003$ & $0.581 \pm 0.004$ & $0.526 \pm 0.003$ & $81.1 \pm 2.3$ & $7.61 \pm 0.28$ & $0.839 \pm 0.021$ \\
+ & Unsigned Inv+env & $0.337 \pm 0.006$ & $0.516 \pm 0.006$ & $0.507 \pm 0.004$ & $84.5 \pm 2.0$ & $6.98 \pm 0.29$ & $0.846 \pm 0.020$ \\
+ & Signed $|Z_h|$ (no env) & $0.726 \pm 0.002$ & $0.718 \pm 0.009$ & $0.649 \pm 0.007$ & $91.2 \pm 1.8$ & $6.61 \pm 0.14$ & $0.912 \pm 0.013$ \\
+ & \textbf{OpRes-CP $\sigma_h$ (ours)} & $0.681 \pm 0.005$ & $0.716 \pm 0.008$ & $0.607 \pm 0.007$ & $94.4 \pm 0.8$ & $5.28 \pm 0.11$ & $0.912 \pm 0.013$ \\
+ & 5-Member Ens.\ std & $0.468 \pm 0.009$ & $0.587 \pm 0.010$ & $0.504 \pm 0.007$ & $84.1 \pm 1.9$ & $4.19 \pm 0.13$ & $0.843 \pm 0.019$ \\
+\addlinespace[3pt]
+AC $64^2$ $T=1$ ID & Raw $|R_h|$ (PI-CP) & $0.518 \pm 0.007$ & $0.548 \pm 0.012$ & $0.414 \pm 0.009$ & $91.8 \pm 1.9$ & $15.23 \pm 1.26$ & $0.923 \pm 0.012$ \\
+ & Unsigned Inv+env & $0.709 \pm 0.011$ & $0.735 \pm 0.010$ & $0.581 \pm 0.014$ & $100.0 \pm 0.0$ & $6.01 \pm 0.13$ & $0.929 \pm 0.009$ \\
+ & Signed $|Z_h|$ (no env) & $0.996 \pm 0.000$ & $0.986 \pm 0.001$ & $0.959 \pm 0.002$ & $100.0 \pm 0.0$ & $8.07 \pm 0.19$ & $0.888 \pm 0.017$ \\
+ & \textbf{OpRes-CP $\sigma_h$ (ours)} & $0.920 \pm 0.003$ & $0.954 \pm 0.002$ & $0.899 \pm 0.004$ & $100.0 \pm 0.0$ & $6.66 \pm 0.16$ & $0.891 \pm 0.017$ \\
+ & 5-Member Ens.\ std & $0.463 \pm 0.020$ & $0.476 \pm 0.032$ & $0.350 \pm 0.030$ & $70.7 \pm 8.1$ & $2.95 \pm 0.33$ & $0.784 \pm 0.041$ \\
+\addlinespace[3pt]
+L-shape $64^2$ ID & Raw $|R_h|$ (PI-CP) & $-0.013 \pm 0.007$ & $0.023 \pm 0.010$ & $0.102 \pm 0.006$ & $33.4 \pm 4.0$ & $8.25 \pm 1.19$ & $0.778 \pm 0.014$ \\
+ & Unsigned Inv+env & $0.414 \pm 0.010$ & $0.372 \pm 0.010$ & $0.245 \pm 0.011$ & $8.5 \pm 2.0$ & $1.31 \pm 0.03$ & $0.750 \pm 0.028$ \\
+ & Signed $|Z_h|$ (no env) & $0.856 \pm 0.003$ & $0.910 \pm 0.003$ & $0.774 \pm 0.005$ & $100.0 \pm 0.0$ & $7.92 \pm 0.33$ & $0.879 \pm 0.008$ \\
+ & \textbf{OpRes-CP $\sigma_h$ (ours)} & $0.676 \pm 0.003$ & $0.750 \pm 0.003$ & $0.609 \pm 0.005$ & $91.1 \pm 2.2$ & $3.18 \pm 0.09$ & $0.880 \pm 0.008$ \\
+ & 5-Member Ens.\ std & $0.429 \pm 0.011$ & $0.445 \pm 0.015$ & $0.331 \pm 0.012$ & $48.3 \pm 4.8$ & $2.47 \pm 0.22$ & $0.855 \pm 0.010$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\caption{Signed solution-space error recovery of $Z_h=B_h R_h$ against $e_h=\widehat U_h - U_h$ across all ten benchmark splits (five-seed mean $\pm$ SD), together with Theorem~\ref{thm:fixed}'s effective peak-concentration ratio $\rho_i$ and $\tilde\sigma(x^*)$. Even when the unscaled approximation defect $\|Z_h-e_h\|_2/\|e_h\|_2$ exceeds $1$ (Darcy OOD-A/B), positive homogeneity absorbs global mis-scaling while preserving spatial peak concentration $\tilde\sigma(x^*) > 1.7$.}
+\label{tab:opres-signed-recovery}
+\begin{tabular}{lrrrrr}
+\toprule
+Benchmark / split & $\cos(Z_h, e_h)$ & $\|Z_h-e_h\|_2/\|e_h\|_2$ & $\min_\alpha\|\alpha Z_h-e_h\|_2/\|e_h\|_2$ & Thm.~\ref{thm:fixed} $\overline\rho_i$ & $\tilde\sigma(x^*)$ \\
+\midrule
+Darcy $64^2$ ID & $0.854 \pm 0.007$ & $0.765 \pm 0.026$ & $0.471 \pm 0.009$ & $1.82 \pm 0.09$ & $3.00 \pm 0.14$ \\
+Darcy $64^2$ OOD-A & $0.786 \pm 0.006$ & $1.153 \pm 0.064$ & $0.562 \pm 0.006$ & $2.50 \pm 0.10$ & $3.92 \pm 0.11$ \\
+Darcy $64^2$ OOD-B & $0.186 \pm 0.154$ & $4.964 \pm 2.952$ & $0.898 \pm 0.006$ & $0.98 \pm 0.06$ & $1.75 \pm 0.19$ \\
+\addlinespace[3pt]
+Burgers $64$ ID & $0.724 \pm 0.011$ & $0.830 \pm 0.026$ & $0.648 \pm 0.011$ & $2.83 \pm 0.09$ & $5.28 \pm 0.11$ \\
+Burgers $64$ Visc.-OOD & $0.618 \pm 0.016$ & $1.082 \pm 0.024$ & $0.752 \pm 0.013$ & $3.03 \pm 0.07$ & $6.02 \pm 0.14$ \\
+Burgers $64$ High-OOD & $0.812 \pm 0.005$ & $0.583 \pm 0.009$ & $0.554 \pm 0.006$ & $1.99 \pm 0.06$ & $4.98 \pm 0.24$ \\
+\addlinespace[3pt]
+Allen--Cahn $64^2$ $T=1$ ID & $0.996 \pm 0.000$ & $0.091 \pm 0.003$ & $0.063 \pm 0.002$ & $5.78 \pm 0.09$ & $6.66 \pm 0.16$ \\
+Allen--Cahn $64^2$ React.-OOD & $0.990 \pm 0.001$ & $0.131 \pm 0.013$ & $0.101 \pm 0.008$ & $5.91 \pm 0.37$ & $7.00 \pm 0.46$ \\
+\addlinespace[3pt]
+L-shape $64^2$ ID (AMG-PCG2) & $0.954 \pm 0.002$ & $0.323 \pm 0.005$ & $0.287 \pm 0.004$ & $2.55 \pm 0.06$ & $3.18 \pm 0.09$ \\
+L-shape $64^2$ OOD-A (AMG-PCG2) & $0.954 \pm 0.001$ & $0.313 \pm 0.006$ & $0.279 \pm 0.004$ & $3.33 \pm 0.18$ & $4.09 \pm 0.19$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Exact discrete operator approximation residual $\|B_h A_h e_h - e_h\|_2 / \|e_h\|_2$ computed with the exact finite-volume matrix $A_h$ across five seeds (mean $\pm$ SD), directly testing Proposition~\ref{prop:resolution}'s operator defect $\delta_{\rm inv}$. On Darcy OOD-B, Liouville's omitted potential drives defect $>1$ (explaining point-correction collapse), whereas multilevel AMG retains contractive accuracy across both rectangular and re-entrant domains.}
+\label{tab:opres-op-approx}
+\begin{tabular}{lrrrr}
+\toprule
+Domain / split & Liouville DST-II & AMG-V2 & AMG-PCG2 & Jacobi-PCG5 \\
+\midrule
+Darcy $64^2$ ID & $0.765 \pm 0.026$ & $0.192 \pm 0.004$ & $0.416 \pm 0.008$ & $0.778 \pm 0.005$ \\
+Darcy $64^2$ OOD-A & $1.153 \pm 0.064$ & $0.195 \pm 0.005$ & $0.407 \pm 0.007$ & $0.751 \pm 0.004$ \\
+Darcy $64^2$ OOD-B & $4.964 \pm 2.952$ & $0.190 \pm 0.004$ & $0.499 \pm 0.008$ & $0.885 \pm 0.015$ \\
+\addlinespace[3pt]
+L-shape $64^2$ ID & -- & $0.143 \pm 0.002$ & $0.323 \pm 0.005$ & $0.734 \pm 0.005$ \\
+L-shape $64^2$ OOD-A & -- & $0.144 \pm 0.003$ & $0.313 \pm 0.006$ & $0.706 \pm 0.014$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.8pt}
+\caption{Spectral-band decomposition of forecast error on Darcy $64^2$ (DST-II radial modes) and L-shape $64^2$ (Dirichlet Laplacian eigenmodes) across five seeds. Raw $|R_h|$ correlates primarily with the negligible high-frequency tail while missing the dominant low-frequency error band; OpRes-CP recovers the dominant low- and mid-frequency error structure.}
+\label{tab:opres-freq-bands}
+\begin{tabular}{llrrrrr}
+\toprule
+Domain & Spectral band & Error energy (\%) & $\cos(Z_h^{(b)}, e_h^{(b)})$ & $\rho(|R_h|,|e^{(b)}|)$ & $\rho(\sigma_h,|e^{(b)}|)$ & $\rho(\sigma_{\rm ens},|e^{(b)}|)$ \\
+\midrule
+Darcy $64^2$ ID & Low ($k \le 8$) & $70.4 \pm 0.5$ & $0.828 \pm 0.012$ & $-0.118 \pm 0.017$ & $0.608 \pm 0.014$ & $0.410 \pm 0.015$ \\
+ & Mid ($8 < k \le 24$) & $21.1 \pm 0.4$ & $0.910 \pm 0.003$ & $-0.077 \pm 0.005$ & $0.248 \pm 0.005$ & $0.245 \pm 0.006$ \\
+ & High ($k > 24$) & $8.4 \pm 0.6$ & $0.981 \pm 0.002$ & $0.346 \pm 0.006$ & $0.121 \pm 0.016$ & $0.121 \pm 0.019$ \\
+\addlinespace[3pt]
+L-shape $64^2$ ID & Low ($k \le 8$) & $64.1 \pm 0.7$ & $0.957 \pm 0.002$ & $-0.085 \pm 0.009$ & $0.586 \pm 0.007$ & $0.452 \pm 0.004$ \\
+ & Mid ($8 < k \le 24$) & $27.1 \pm 0.3$ & $0.998 \pm 0.000$ & $-0.071 \pm 0.012$ & $0.379 \pm 0.006$ & $0.309 \pm 0.003$ \\
+ & High ($k > 24$) & $8.8 \pm 0.5$ & $1.000 \pm 0.000$ & $0.298 \pm 0.005$ & $0.244 \pm 0.009$ & $0.170 \pm 0.008$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

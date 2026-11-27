@@ -1,0 +1,110 @@
+% Auto-generated booktabs LaTeX tables. Requires booktabs.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{ID simultaneous coverage (\%) and coverage-matched full width. Mean $\pm$ SD over five seeds with 500 cases each. Width is matched empirically.}
+\label{tab:opres-id}
+\begin{tabular}{llrrrr}
+\toprule
+Benchmark & Method & Cov.\ 90\% & Width at 90\% & Cov.\ 95\% & Width at 95\% \\
+\midrule
+Darcy & OpRes-CP & $90.20 \pm 1.11$ & $0.0173 \pm 0.0014$ & $95.12 \pm 1.21$ & $0.0194 \pm 0.0018$ \\
+Darcy & Ensemble (same center) & $90.28 \pm 2.12$ & $0.0539 \pm 0.0079$ & $95.24 \pm 1.07$ & $0.0814 \pm 0.0188$ \\
+Darcy & Ensemble (mean) & $90.40 \pm 2.02$ & $0.0539 \pm 0.0086$ & $95.28 \pm 1.03$ & $0.0805 \pm 0.0194$ \\
+Darcy & MC-Dropout & $89.60 \pm 2.44$ & $0.0701 \pm 0.0065$ & $95.72 \pm 1.14$ & $0.1234 \pm 0.0189$ \\
+\addlinespace[3pt]
+Burgers & OpRes-CP & $90.00 \pm 1.75$ & $0.1393 \pm 0.0063$ & $95.76 \pm 1.54$ & $0.1571 \pm 0.0082$ \\
+Burgers & Ensemble (same center) & $90.28 \pm 2.00$ & $0.2657 \pm 0.0043$ & $94.40 \pm 2.06$ & $0.3189 \pm 0.0110$ \\
+Burgers & Ensemble (mean) & $90.16 \pm 1.88$ & $0.2648 \pm 0.0074$ & $94.12 \pm 2.19$ & $0.3199 \pm 0.0125$ \\
+Burgers & MC-Dropout & $89.52 \pm 1.68$ & $0.3888 \pm 0.0065$ & $94.76 \pm 1.70$ & $0.4443 \pm 0.0157$ \\
+\addlinespace[3pt]
+Allen--Cahn $T=1$ & OpRes-CP & $88.68 \pm 2.14$ & $0.0103 \pm 0.0006$ & $93.48 \pm 1.86$ & $0.0112 \pm 0.0008$ \\
+Allen--Cahn $T=1$ & Ensemble (same center) & $87.80 \pm 1.96$ & $0.1364 \pm 0.0046$ & $94.16 \pm 0.86$ & $0.1607 \pm 0.0068$ \\
+Allen--Cahn $T=1$ & Ensemble (mean) & $87.48 \pm 2.14$ & $0.1365 \pm 0.0042$ & $94.04 \pm 1.01$ & $0.1622 \pm 0.0082$ \\
+Allen--Cahn $T=1$ & MC-Dropout & $89.12 \pm 1.70$ & $0.1918 \pm 0.0127$ & $94.88 \pm 1.22$ & $0.2206 \pm 0.0124$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Warm T4 single-case median wall time and training time. Means over five seeds. OpRes adds no backbone training.}
+\label{tab:opres-runtime}
+\begin{tabular}{lrrrrrr}
+\toprule
+Benchmark & OpRes ms & Ens.\ ms & MC ms & Single s & Ens.\ s & MC s \\
+\midrule
+Darcy & 4.12 & 17.31 & 119.65 & 78.84 & 367.64 & 82.30 \\
+Burgers & 9.36 & 10.27 & 73.21 & 33.73 & 149.37 & 29.76 \\
+Allen--Cahn $T=1$ & 84.99 & 312.08 & 1923.79 & 76.26 & 368.56 & 73.80 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{OOD coverage (\%) at the locked source threshold and width empirically matched to $90\%$ coverage, with 500 target cases per seed.}
+\label{tab:opres-ood}
+\begin{tabular}{lrrr}
+\toprule
+Target & OpRes & Ensemble mean & MC-Dropout \\
+\midrule
+Darcy contrast & 88.48 / 0.0455 & 78.20 / 0.1492 & 76.56 / 0.1982 \\
+Darcy structure & 91.64 / 0.1110 & 69.20 / 0.1997 & 94.44 / 0.0712 \\
+Burgers viscosity & 95.32 / 0.2975 & 61.16 / 0.7056 & 52.96 / 0.5806 \\
+Burgers high frequency & 35.60 / 0.3971 & 83.28 / 0.7259 & 62.36 / 0.5606 \\
+Allen--Cahn reaction $T=1$ & 87.84 / 0.0254 & 88.80 / 0.5061 & 73.52 / 0.3143 \\
+Allen--Cahn reaction $T=2$ & 55.56 / 0.0517 & 66.48 / 1.3512 & 69.60 / 0.5449 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\caption{Seven paired grid transfers at $\alpha=0.10$. Coverage change and gains are in percentage points. The gain interval resamples paired fields within each of the five fixed seeds.}
+\label{tab:opres-grid}
+\begin{tabular}{lrrrrrr}
+\toprule
+Transfer & OpRes & Ens.\ same & Ens.\ mean & Dropout & Width ratio & Gain vs.\ mean [95\% CI] \\
+\midrule
+Darcy 64$^2$ $\to$ 128$^2$ & $-1.44$ & $-1.28$ & $-1.20$ & $-0.16$ & 1.043 & $-0.24\;[-1.28,\,+0.80]$ \\
+Darcy 32$^2$ $\to$ 64$^2$ & $+0.76$ & $-4.00$ & $-3.88$ & -- & 1.429 & $+4.64\;[+3.16,\,+6.16]$ \\
+Darcy 32$^2$ $\to$ 128$^2$ & $-20.92$ & $-6.56$ & $-7.32$ & -- & 1.506 & $-13.60\;[-15.88,\,-11.36]$ \\
+Burgers 64 $\to$ 128 & $+3.24$ & $-8.16$ & $-8.48$ & $-3.24$ & 1.058 & $+11.72\;[+9.92,\,+13.56]$ \\
+Burgers 64 $\to$ 256 & $+3.56$ & $-15.40$ & $-15.36$ & $-4.56$ & 1.101 & $+18.92\;[+16.96,\,+20.96]$ \\
+Allen--Cahn T=1 & $-0.36$ & $-7.52$ & $-7.56$ & $-1.16$ & 0.999 & $+7.20\;[+5.92,\,+8.52]$ \\
+Allen--Cahn T=2 & $-5.36$ & $-13.36$ & $-13.20$ & $-1.12$ & 0.997 & $+7.84\;[+6.20,\,+9.44]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\caption{Allen--Cahn $T=2$ coverage (\%) / actual full width across five seeds ($\alpha=0.10$), partitioned into (left) empirical $T=1 \to T=2$ heuristic quantile reuse without $T=2$ labels and (right) independent $T=2$ calibration satisfying finite-sample marginal validity under Corollary~\ref{cor:windows}.}
+\label{tab:opres-horizon}
+\begin{tabular}{llcccc}
+\toprule
+ & & \multicolumn{2}{c}{Heuristic $T=1 \to T=2$ reuse (no $T=2$ cal.)} & \multicolumn{2}{c}{Independent $T=2$ calibration} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Backbone & Target & T1 90\% & T1 95\% & T2 90\% (Jac.\ on) & T2 90\% (Jac.\ off) \\
+\midrule
+FNO & ID $64^2$ & 82.52 / 0.0194 & 94.56 / 0.0208 & 90.60 / 0.0200 & 90.60 / 0.0555 \\
+FNO & Paired $128^2$ & 76.56 / 0.0193 & 92.48 / 0.0206 & 86.56 / 0.0198 & 90.48 / 0.0550 \\
+FNO & Reaction OOD & 55.32 / 0.0466 & 84.24 / 0.0498 & 73.96 / 0.0480 & 61.00 / 0.1369 \\
+\addlinespace[3pt]
+U-Net & ID $64^2$ & 83.72 / 0.0207 & 97.76 / 0.0240 & 91.12 / 0.0206 & 89.76 / 0.0498 \\
+U-Net & Paired $128^2$ & 67.64 / 0.2508 & 91.52 / 0.2862 & 65.80 / 0.2455 & 99.96 / 0.6065 \\
+U-Net & Reaction OOD & 83.96 / 0.0585 & 96.44 / 0.0673 & 85.12 / 0.0581 & 58.36 / 0.1587 \\
+\bottomrule
+\end{tabular}
+\end{table}

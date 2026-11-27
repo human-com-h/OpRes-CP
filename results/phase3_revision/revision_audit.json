@@ -1,0 +1,609 @@
+{
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "seeds": [
+    42,
+    137,
+    314,
+    271,
+    811
+  ],
+  "cache_manifest": [
+    {
+      "pde": "darcy",
+      "seed": 42,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/darcy/seed_42/data/cal.npz",
+      "sha256": "5afc47b0ff9d5717c8f5196e46a6e1dcb4d228c2a15dd6f9129d6d8bdb8a44a0",
+      "reference_sha256": "84ddba847c95fce24850299e64d9a0e3f954b9d2fb69c63a4a7ab12a430f8735",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 42,
+      "split": "id_test",
+      "path": "results/phase3_revision/cache/darcy/seed_42/data/id_test.npz",
+      "sha256": "fef3a1c39f83cc0b1f1211246f0d9125f6cbc0013297fa36360be2fbf5deb324",
+      "reference_sha256": "01faa1358622c12843331fb47222c16cbf6c120fd42c9a684057501c7a3ad68e",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 42,
+      "split": "ood_a",
+      "path": "results/phase3_revision/cache/darcy/seed_42/data/ood_a.npz",
+      "sha256": "341b0d484d4d077729765468258e164911fcee4d36080e5e1a9cb0b55bd911e1",
+      "reference_sha256": "988ea50e652c3c61412128be605515f673a7cdafbd98507372998b284791b4f0",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 42,
+      "split": "ood_b",
+      "path": "results/phase3_revision/cache/darcy/seed_42/data/ood_b.npz",
+      "sha256": "cdc7628729d0c0d38d8ef0c2b7be159a7f447b3cb88cf86e159c5dee2663c8c2",
+      "reference_sha256": "cfdd52f5231a37ee530237d11574119ee4b60bf4e4dfb224a40feca2f7635efa",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 42,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/burgers/seed_42/data/cal.npz",
+      "sha256": "58519921876d50908135e23a9fa43e2be1d6aba208deab885688c8bbac7940e0",
+      "reference_sha256": "044df4e533350940007e18663ef42ebd96505373b8fc7fc5c5038154a86892c7",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 42,
+      "split": "id",
+      "path": "results/phase3_revision/cache/burgers/seed_42/data/id.npz",
+      "sha256": "116cf32e406c1f923f65ce9ad9b2a5ba67bdc2a8fae6741273672881583590d5",
+      "reference_sha256": "9abdf6c713a5ee5ef46614e03e36f4b508586045f61297369e2afed5ce92598c",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 42,
+      "split": "ood",
+      "path": "results/phase3_revision/cache/burgers/seed_42/data/ood.npz",
+      "sha256": "fe6ef8efa762f21499ded2c60f46223c96eda4ecc5d89b84a98f1d940f359c09",
+      "reference_sha256": "6958e8e2a21615870a28abdf000a2ede1eeb1bbbb6028d1863ca56fa8b86eae7",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 42,
+      "split": "ood_high",
+      "path": "results/phase3_revision/cache/burgers/seed_42/data/ood_high.npz",
+      "sha256": "c779da96d8835b9fd81c1519a5a582847bccbc52418f8338273e2a8c313337d1",
+      "reference_sha256": "fb0c7e81931c3a710f8a1c7cc1ea1cf9e4fa261b901f42efcca41d8a7621f1d5",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 42,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_42/data/cal.npz",
+      "sha256": "8414fb3eeb332dbfe848f473cb5e96b357597d28ae32ddff2606926679c6dacc",
+      "reference_sha256": "5cc08900f303a5a7ca49655d188f70576b9cfc68afcf7fa64059bb9f345a9249",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 42,
+      "split": "id",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_42/data/id.npz",
+      "sha256": "aba65817e7e117ddef1391f4c8b940172327abcac56cc9b5237a1a930604a938",
+      "reference_sha256": null,
+      "exact_hash_match": null
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 42,
+      "split": "ood",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_42/data/ood.npz",
+      "sha256": "b8a12b343cfe0c1ed55438ec8ea7a98aeba2ba640ced7deb88533c62b65a35ec",
+      "reference_sha256": null,
+      "exact_hash_match": null
+    },
+    {
+      "pde": "darcy",
+      "seed": 137,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/darcy/seed_137/data/cal.npz",
+      "sha256": "05b7f821e5b3339d85f24a7a48bc4282c6d065ede48a44234b9d4c4f138245a1",
+      "reference_sha256": "9ff4dfec28bc069aac35678d736b184beba520214a72b56e9874773c21a6516e",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 137,
+      "split": "id_test",
+      "path": "results/phase3_revision/cache/darcy/seed_137/data/id_test.npz",
+      "sha256": "fdac3437da56cc000fa4ef698e9d6bc31a2876f5bbe326f7d16def8d4d9aa6d8",
+      "reference_sha256": "04150376f3fd32a6e54c252854294b64ba4453154654dcad323c5c0c92c2d1cb",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 137,
+      "split": "ood_a",
+      "path": "results/phase3_revision/cache/darcy/seed_137/data/ood_a.npz",
+      "sha256": "7a2f8c13c3347d75b91797982f1fd4f4f3615452a0c9fc183cecdfe6d692f3b8",
+      "reference_sha256": "30107026f4d86d774c7e0b4e88dbc735800653194d04593f6e7f5015e96428cc",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 137,
+      "split": "ood_b",
+      "path": "results/phase3_revision/cache/darcy/seed_137/data/ood_b.npz",
+      "sha256": "fb48c8460f813acb0f2e1ae99911131683d39039f6a1b130351a2a840f9a8ade",
+      "reference_sha256": "c72d5009e84c1e7d6b646dff580533be259e7a7f880294a94f39c788327ad9a9",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 137,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/burgers/seed_137/data/cal.npz",
+      "sha256": "17e9fa1ce441d9a7415d6d50c7dab14a0f543a2309635159fbf865c62738e745",
+      "reference_sha256": "0026759e18ee7039c5b39afb71900f496bd95af5e2759a5e12ee518c4721f90b",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 137,
+      "split": "id",
+      "path": "results/phase3_revision/cache/burgers/seed_137/data/id.npz",
+      "sha256": "ee36754ef179de771b1f844c1cdd7aecc1b4a5d73cf530b700a076e94de9aa65",
+      "reference_sha256": "35f76892ec66c2b2e30e335c3641295b0d2aaf6e9f905d1e8c88eb97f8989ff0",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 137,
+      "split": "ood",
+      "path": "results/phase3_revision/cache/burgers/seed_137/data/ood.npz",
+      "sha256": "40f08d2733be466491d2b8b6a5b9807bf07c641c3399b3b13abe19ea2c797614",
+      "reference_sha256": "681ead606e622d3d9858a80947bd2cb5174077884f3865afbe37fb2f6e4fcfe8",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 137,
+      "split": "ood_high",
+      "path": "results/phase3_revision/cache/burgers/seed_137/data/ood_high.npz",
+      "sha256": "b9e9e715589aa31794c2d91eb698d535597007a296a5969e78498769257c8380",
+      "reference_sha256": "aefd2432948af2d843d762160e7fa1fbe847e8dfd136b765fdc0ee14b4178451",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 137,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_137/data/cal.npz",
+      "sha256": "1ee8e9e614c070401b77c82d5594528a18621c7e8dd8a32d78204a718681c993",
+      "reference_sha256": "35b532d5b48339fbe49c46a2433128f354d17c57ebffdf15a2eb81a0c6b38c93",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 137,
+      "split": "id",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_137/data/id.npz",
+      "sha256": "e34309ae8e5e012a9f98fd010c98a431c80d4281220ea946d677dae318dce7f7",
+      "reference_sha256": null,
+      "exact_hash_match": null
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 137,
+      "split": "ood",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_137/data/ood.npz",
+      "sha256": "20d15c403264ea8c81bf2fef867b8633389e42baa55b51d6e493586dc30a50e9",
+      "reference_sha256": null,
+      "exact_hash_match": null
+    },
+    {
+      "pde": "darcy",
+      "seed": 314,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/darcy/seed_314/data/cal.npz",
+      "sha256": "cc6245d11a676e6e45eb8a419e441141d252cc24875dafcd989de957a0d01128",
+      "reference_sha256": "9c489ecc3030dcdc96f7be010f8d81038e3b8ab4eaf1f1454114742527fae76c",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 314,
+      "split": "id_test",
+      "path": "results/phase3_revision/cache/darcy/seed_314/data/id_test.npz",
+      "sha256": "1d09b05c8e40625b6c1ca3280e66db7f27bca25fde702b070dd050a4b4fe57f1",
+      "reference_sha256": "5bb37ed4edeb84182f2563aede93e685e39d87f86b74148a372114e24c9052aa",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 314,
+      "split": "ood_a",
+      "path": "results/phase3_revision/cache/darcy/seed_314/data/ood_a.npz",
+      "sha256": "55fd8616e836b7e54c6ec638de05e28265948d53f1cdda728714d664501c0e4a",
+      "reference_sha256": "9765d3e63c4a59d3be2d91d9b82175fbc3cac671cecad3b50b2760bee7333c6f",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 314,
+      "split": "ood_b",
+      "path": "results/phase3_revision/cache/darcy/seed_314/data/ood_b.npz",
+      "sha256": "bfbc28085acc73055332703eef0d0a538aa7a0f177a211eed509da417eb1c643",
+      "reference_sha256": "e47be35883d612de51d0d122685cbed6c0953e4f7cb35b9565801c7464f71c50",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 314,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/burgers/seed_314/data/cal.npz",
+      "sha256": "6e4bf0fb24b8e8dc7a2eeb319f14bacb6f32809380c645e6155f695bce58e399",
+      "reference_sha256": "e01af9c96d181adf2f255e884e92ae2ee42e2466ae811f344cc2b83f3bf4ef55",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 314,
+      "split": "id",
+      "path": "results/phase3_revision/cache/burgers/seed_314/data/id.npz",
+      "sha256": "960710ec6c78914e73e835a3d50e9b52c948a9ba36dd57b5ae0c67a22678bc48",
+      "reference_sha256": "a0fe935d7c7426698fbcd9b0dcd269c4d826d21f0a45c253163dd49ba2f66e02",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 314,
+      "split": "ood",
+      "path": "results/phase3_revision/cache/burgers/seed_314/data/ood.npz",
+      "sha256": "8daafa85737deb71e2e4dea5669d1c73d5839d6eff6a3a0266ca33599c8c0be7",
+      "reference_sha256": "474e43ecfff77fdf34c98551889a5cde4b84eddc249f979d6661fb6e01e64234",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 314,
+      "split": "ood_high",
+      "path": "results/phase3_revision/cache/burgers/seed_314/data/ood_high.npz",
+      "sha256": "308fb46d1e592208f7b6c04bb3bae68927a02e6b830d076b91a0477cd3861724",
+      "reference_sha256": "67103ddb86e2183d676fada391cfe4d7201ae65c24d9ac64aa0ab27871c76136",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 314,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_314/data/cal.npz",
+      "sha256": "fdea1b739dee20ab8fc860e68e4fadc5834107212e156a8a54992cdbcf42abb0",
+      "reference_sha256": "6b6cc297d31b376973a3d728c4deb1847724ac1c41b9048a127ace1220447f9c",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 314,
+      "split": "id",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_314/data/id.npz",
+      "sha256": "dd1c077950ddc9ec0df9f9c00257385de28aa529331df32720fb6135b5cd4248",
+      "reference_sha256": null,
+      "exact_hash_match": null
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 314,
+      "split": "ood",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_314/data/ood.npz",
+      "sha256": "4ac16d29e24061030cd7da111bd8e745c2f24cfb8fff0a0e865a694d715ca606",
+      "reference_sha256": null,
+      "exact_hash_match": null
+    },
+    {
+      "pde": "darcy",
+      "seed": 271,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/darcy/seed_271/data/cal.npz",
+      "sha256": "1d682c6a3539a61c1107392634ed188495d87af706b318df7e90aed6d9992298",
+      "reference_sha256": "2131e9272051291b319c21c7107859b74c6bda22366c5885575f45e556086b3c",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 271,
+      "split": "id_test",
+      "path": "results/phase3_revision/cache/darcy/seed_271/data/id_test.npz",
+      "sha256": "e9fd377910d2d7acb41a2526b24e6a70bf4d4fd421d7e72fa87e41561532182a",
+      "reference_sha256": "f51095278b75f4b8aad2e1337b8af70b7ca5937a5f0998783efba43973290415",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 271,
+      "split": "ood_a",
+      "path": "results/phase3_revision/cache/darcy/seed_271/data/ood_a.npz",
+      "sha256": "66e66e258888428703c48aca07dc5f1abd290bc75f7c7d57c08791b02e91a383",
+      "reference_sha256": "829b6b9c450279cafb9edc263eba8aa4cc617ca8c09ed3ec92c1d3fa071fb1ba",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 271,
+      "split": "ood_b",
+      "path": "results/phase3_revision/cache/darcy/seed_271/data/ood_b.npz",
+      "sha256": "3c963242f13fe616f0fd4cab77fe8861e62d8c917a97234e67f2c1bcae3b7627",
+      "reference_sha256": "4bedc9a4299b5c7d55f83c4c7012ac29b68b6d44e32357a552fbd8b13c509878",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 271,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/burgers/seed_271/data/cal.npz",
+      "sha256": "691b79ea9890da56e127658a1c953f9f043c56852f461d0c512a5099701821ca",
+      "reference_sha256": "e597564a44710b1d093c33155ecdfa01d3303a92d303b42a6450d767ee6df30b",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 271,
+      "split": "id",
+      "path": "results/phase3_revision/cache/burgers/seed_271/data/id.npz",
+      "sha256": "5889d8dae1c31c0f972b043f4da26dcbdce92d057b10e2787e10c6a50e64f984",
+      "reference_sha256": "57117a49c5f1193fc88e9465295a9bbcfd3d1f1619edd77ce3a898e503780257",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 271,
+      "split": "ood",
+      "path": "results/phase3_revision/cache/burgers/seed_271/data/ood.npz",
+      "sha256": "1e5b20a195c71458640e168475665f7ceb063b711a033d0d2cba53cc60650587",
+      "reference_sha256": "ed3332ac0249cf180d32e430dd0d8afec34d438cd2c15f3b42164ef456153b43",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 271,
+      "split": "ood_high",
+      "path": "results/phase3_revision/cache/burgers/seed_271/data/ood_high.npz",
+      "sha256": "26e3403adc9b17e956968c8555b84101dac3430e26d5c32be997f2b661389c45",
+      "reference_sha256": "306facd0085802f89e5018a9bce714da91a114024656e0309e0260bfa9662957",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 271,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_271/data/cal.npz",
+      "sha256": "9988a04f2762f4210992faa6393ed99c8122d5591d0ea51a8b7129d025f208cb",
+      "reference_sha256": "24ec532edf319dac6236757fb024028d871a97f77cbf5735bf9b000e181eb7eb",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 271,
+      "split": "id",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_271/data/id.npz",
+      "sha256": "1e8d13d49e83ebf99a0610b153b0abb37ce8601074af7f7297e19defb0eb5b9f",
+      "reference_sha256": null,
+      "exact_hash_match": null
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 271,
+      "split": "ood",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_271/data/ood.npz",
+      "sha256": "9daa50e127715a6020c5be50900bf072d49ef9748c45a0bb59a2b1f28ddc6870",
+      "reference_sha256": null,
+      "exact_hash_match": null
+    },
+    {
+      "pde": "darcy",
+      "seed": 811,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/darcy/seed_811/data/cal.npz",
+      "sha256": "549beb3b3b2efc8bd8dce8372f4b72c32e017ee222442dd0af72702ea29ff004",
+      "reference_sha256": "6d9520b447f77fbdc3f6f191529829cf8741c85f0c0d0a201a8679669068c4c2",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 811,
+      "split": "id_test",
+      "path": "results/phase3_revision/cache/darcy/seed_811/data/id_test.npz",
+      "sha256": "81e2ff169911f2395e227076d56dfc2882e7e4ea61c1b76f2998901b0eafbda1",
+      "reference_sha256": "7cefe0db229d6c0368159f6a6c63aebae6bdbee277ebe31c129f2fa1884037a4",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 811,
+      "split": "ood_a",
+      "path": "results/phase3_revision/cache/darcy/seed_811/data/ood_a.npz",
+      "sha256": "0de88087609095eaac9bbbabc6ca69c4f4a4084a66ccf32162233fa35a309cb2",
+      "reference_sha256": "1af04f6e52345830f9cf57106bf2ac943403d3d74af6da4f8ac26f84dc8b66c1",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "darcy",
+      "seed": 811,
+      "split": "ood_b",
+      "path": "results/phase3_revision/cache/darcy/seed_811/data/ood_b.npz",
+      "sha256": "08dcdf3cca7c380c1fa23c0dc48b94dbc572534ad9b4f611016ab2b330959e9d",
+      "reference_sha256": "95a8e6978bab7172fe0d829db1110e9f2b2903690fe64b1360e1f1c20a92de7d",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 811,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/burgers/seed_811/data/cal.npz",
+      "sha256": "ee0590d91feb352eee22acd46d854e796c46c6edb3e51122856f9a647e872747",
+      "reference_sha256": "1511f6d868e3a047a150a6d0399dfb6ebec59e4943e67bab43859242d29a660c",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 811,
+      "split": "id",
+      "path": "results/phase3_revision/cache/burgers/seed_811/data/id.npz",
+      "sha256": "3510883530d8da5e105971cd27ff0b4596bc2cdd3e7779e07e9a6b8f0b8c2cef",
+      "reference_sha256": "e834f47b3101b60618e3595f8a6004df90f69c510f9af9c1cbb2fb4b4966cb8d",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 811,
+      "split": "ood",
+      "path": "results/phase3_revision/cache/burgers/seed_811/data/ood.npz",
+      "sha256": "7fa156b98237a67ce0233e5465492d3026140e0d994a2771f453f40a7b4dd42d",
+      "reference_sha256": "da88589ff7260016dff4f2920b5267f0a2817b94719a41de716414edec2cc7d9",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "burgers",
+      "seed": 811,
+      "split": "ood_high",
+      "path": "results/phase3_revision/cache/burgers/seed_811/data/ood_high.npz",
+      "sha256": "306d6c7346da0ce489517cfac429602d4bbac1692ea63038ad17788fcc7f292c",
+      "reference_sha256": "814fdcb423420a5e227fd0e12740be0f270ad7087be53e1db1b2300e1543137a",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 811,
+      "split": "cal",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_811/data/cal.npz",
+      "sha256": "6051f5c36bb82380f54e3933a2ce04138e264a1a5577e865d2b3de5ca533e54f",
+      "reference_sha256": "19c4b74d357209bd436fafd060d57a36490b25e6ad34a258f3bc01393132c19e",
+      "exact_hash_match": false
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 811,
+      "split": "id",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_811/data/id.npz",
+      "sha256": "5471adda32f6578058799a786343aad6745ca45793f1e232d44807c49e31e262",
+      "reference_sha256": null,
+      "exact_hash_match": null
+    },
+    {
+      "pde": "allen_cahn",
+      "seed": 811,
+      "split": "ood",
+      "path": "results/phase3_revision/cache/allen_cahn/seed_811/data/ood.npz",
+      "sha256": "50cba81bcc1b1b1188fcdc52b1f514b62f88400163c30a954dc20db59ed10a14",
+      "reference_sha256": null,
+      "exact_hash_match": null
+    }
+  ],
+  "ess_precision_audit": {
+    "darcy_ood_b_full_c1_cap50": {
+      "phase2d_sealed_ess_mean": 121.429338670821,
+      "recomputed_float32_ess_mean": 121.35844889558385,
+      "recomputed_float64_ess_mean": 121.37346030507426,
+      "float32_vs_phase2d_max_abs_diff": 4.129405095813382,
+      "recomputed_float32_p_test_p50_mean": 0.04384704000764923,
+      "recomputed_float64_p_test_p50_mean": 0.043897268338369884
+    }
+  },
+  "allen_cahn_finite_sample_audit": {
+    "n_cal": 500,
+    "n_test": 500,
+    "alpha": 0.1,
+    "k_rank": 451,
+    "theoretical_mean_coverage": 0.9001996007984032,
+    "theoretical_single_seed_sd": 0.018928479333579627,
+    "theoretical_single_seed_sd_pp": 1.8928479333579626,
+    "ac_t1_fno_id": {
+      "mean": 0.8868,
+      "sd": 0.021382235617446572,
+      "ci95_low": 0.8602504478327063,
+      "ci95_high": 0.9133495521672937,
+      "per_seed": {
+        "42": 0.912,
+        "137": 0.886,
+        "314": 0.87,
+        "271": 0.862,
+        "811": 0.904
+      }
+    },
+    "ac_t1_fno_se": 0.009562426470305545,
+    "ac_t1_fno_ci95_contains_90": true,
+    "ac_t1_fno_two_sided_t_pvalue_vs_nominal": 0.2337476921461481,
+    "ac_t2_fno_id_independent": {
+      "mean": 0.906,
+      "sd": 0.013490737563232052,
+      "ci95_low": 0.8892490368585195,
+      "ci95_high": 0.9227509631414805,
+      "per_seed": {
+        "42": 0.914,
+        "137": 0.924,
+        "314": 0.906,
+        "271": 0.894,
+        "811": 0.892
+      }
+    },
+    "ac_t2_unet_id_independent": {
+      "mean": 0.9112,
+      "sd": 0.017810109488714566,
+      "ci95_low": 0.8890858282437959,
+      "ci95_high": 0.9333141717562041,
+      "per_seed": {
+        "42": 0.904,
+        "137": 0.888,
+        "314": 0.932,
+        "271": 0.926,
+        "811": 0.906
+      }
+    }
+  },
+  "darcy_boundary_linearity_max_abs_diff": 6.661338147750939e-16,
+  "darcy_boundary_timing_cpu_single_field": {
+    "spectral_liouville": {
+      "p50_ms": 0.28065,
+      "p90_ms": 0.40641,
+      "n": 50
+    },
+    "exact_oracle": {
+      "p50_ms": 10.16135,
+      "p90_ms": 10.57627,
+      "n": 50
+    },
+    "speedup_spectral_over_oracle_p50": 36.206484945661856
+  },
+  "lsci_unit_checks": {
+    "synthetic_n_cal": 500,
+    "synthetic_n_test": 1000,
+    "synthetic_native_cov_90": 0.891,
+    "synthetic_native_cov_95": 0.945,
+    "synthetic_native_inf_90": 0.002,
+    "synthetic_native_inf_95": 0.013,
+    "label_perturbation_invariance_passed": true
+  },
+  "fig1_id_examples": {
+    "burgers_id": {
+      "file": "results/phase3_revision/examples/example_burgers_id.npz",
+      "seed": 42,
+      "split": "id_64",
+      "backbone": "FNO",
+      "index": 0,
+      "sample_id": 63040000
+    },
+    "allen_cahn_id": {
+      "file": "results/phase3_revision/examples/example_allen_cahn_id.npz",
+      "seed": 42,
+      "split": "id_64_20",
+      "backbone": "FNO",
+      "index": 0,
+      "sample_id": 73040000
+    }
+  }
+}
