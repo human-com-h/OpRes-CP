@@ -6,10 +6,8 @@
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](https://www.python.org/)
 [![PyTorch 2.2+](https://img.shields.io/badge/PyTorch-2.2%2B-EE4C2C.svg)](https://pytorch.org/)
 [![Seeds: 5 Locked](https://img.shields.io/badge/Seeds-42%2C137%2C314%2C271%2C811-2B5C8F.svg)](configs/phase3.json)
-[![Zenodo DOI](https://img.shields.io/badge/Zenodo%20DOI-pending%20v1.0.0%20release-6B7280.svg)](https://github.com/human-com-h/OpRes-CP/releases)
 
 > **Authors:** [Zida Hao](https://orcid.org/0009-0006-7718-2000)<sup>*</sup>, [Yubo Li](https://orcid.org/0009-0005-8391-9155) — School of Software, Xinjiang University  
-> **Target Journal:** *Computer Methods in Applied Mechanics and Engineering* (CMAME, submitted / under review)  
 > **Repository:** <https://github.com/human-com-h/OpRes-CP>
 
 ![OpRes-CP Graphical Abstract](assets/graphical_abstract.png)
@@ -42,7 +40,7 @@ All metrics below are means across the five locked seeds `[42, 137, 314, 271, 81
 | **2D Elasticity ($P_1$ FEM, vM Stress)** | Gâteaux stress proxy via `Vector SA-AMG-V2` | `89.52%` | `1.86267` | `8.44022` | **77.93% narrower** (`4.53x`) | *(shared surrogate)* |
 
 - Warm single-case end-to-end T4 speedups: **1.1–4.2x** over 5-member ensembles and **7.8–29.0x** over $K=30$ MC-Dropout (GPU-resident Allen–Cahn $128^2$ reaches **3.64–4.03x** batched speedup on RTX 4060).
-- On 2D Elasticity ($\mathcal{T}_c \to \mathcal{T}_f$), `Vector SA-AMG-V2` achieves **100.0% empirical energy contraction** ($\|I - B_h \mathbf{K}_h\|_{\mathbf{K}_h} < 1$) across all five seeds and splits, avoids the fine-mesh collapse of classical Babu\v{s}ka–Rheinboldt and Zienkiewicz–Zhu estimators, and orthogonally sharpens contractive Jha-style point correctors by **2.5–2.9x**.
+- On 2D Elasticity ($\mathcal{T}_c \to \mathcal{T}_f$), `Vector SA-AMG-V2` achieves **100.0% empirical energy contraction** ($\|I - B_h \mathbf{K}_h\|_{\mathbf{K}_h} < 1$) across all five seeds and splits, avoids the fine-mesh collapse of classical Babuška–Rheinboldt and Zienkiewicz–Zhu estimators, and orthogonally sharpens contractive Jha-style point correctors by **2.5–2.9x**.
 
 ---
 
@@ -164,11 +162,10 @@ OpRes-CP/
 ## Citation
 
 ```bibtex
-@article{hao2026oprescp,
-  title   = {Physics-as-Scale vs. Ensembles-as-Scale: Signed Residual Lifting for Simultaneous Conformal Bands},
-  author  = {Hao, Zida and Li, Yubo},
-  journal = {Computer Methods in Applied Mechanics and Engineering},
-  year    = {2026},
-  note    = {Submitted / under review. Code and frozen artifacts: \url{https://github.com/human-com-h/OpRes-CP}}
+@misc{hao2026oprescp,
+  title  = {Physics-as-Scale vs. Ensembles-as-Scale: Signed Residual Lifting for Simultaneous Conformal Bands},
+  author = {Hao, Zida and Li, Yubo},
+  year   = {2026},
+  url    = {https://github.com/human-com-h/OpRes-CP}
 }
 ```

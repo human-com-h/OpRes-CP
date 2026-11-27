@@ -25,7 +25,7 @@ keywords:
   - partial differential equations
   - finite element method
 preferred-citation:
-  type: article
+  type: generic
   title: "Physics-as-Scale vs. Ensembles-as-Scale: Signed Residual Lifting for Simultaneous Conformal Bands"
   authors:
     - family-names: Hao
@@ -34,6 +34,5 @@ preferred-citation:
     - family-names: Li
       given-names: Yubo
       orcid: "https://orcid.org/0009-0005-8391-9155"
-  journal: "Computer Methods in Applied Mechanics and Engineering"
   year: 2026
-  notes: "Submitted / under review"
+  url: "https://github.com/human-com-h/OpRes-CP"
